@@ -12,7 +12,8 @@ namespace FloodPing
         public App()
         {
             // The root page of your application
-            MainPage = new Views.MainPage();
+            //MainPage = new Views.MainPage();
+            MainPage = new NavigationPage(new Views.MainPage());
         }
 
         protected override void OnStart()

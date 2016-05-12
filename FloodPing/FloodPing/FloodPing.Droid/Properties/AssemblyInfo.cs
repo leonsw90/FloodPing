@@ -7,12 +7,12 @@ using Android.App;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("FloodPing.Droid")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("FloodPing")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("FloodPing")]
 [assembly: AssemblyProduct("FloodPing.Droid")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyTrademark("FloodPing")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 
@@ -32,3 +32,4 @@ using Android.App;
 // Add some common permissions, these can be removed if not needed
 [assembly: UsesPermission(Android.Manifest.Permission.Internet)]
 [assembly: UsesPermission(Android.Manifest.Permission.WriteExternalStorage)]
+[assembly: Application(Theme = "@android:style/Theme.Material.Light.DarkActionBar")]

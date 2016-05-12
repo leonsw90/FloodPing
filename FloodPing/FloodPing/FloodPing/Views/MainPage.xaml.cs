@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 
 namespace FloodPing.Views
@@ -20,9 +19,10 @@ namespace FloodPing.Views
             // Launch Traveller App
         }
 
-        public void LaunchEmergency(object sender, EventArgs args)
+        public void LaunchEmergencySendMassMessage(object sender, EventArgs args)
         {
-           // Launch Emergency App
+            // Launch Emergency App
+            Navigation.PushAsync(new Views.EmergencySendMassMessage());
         }
     }
 }
