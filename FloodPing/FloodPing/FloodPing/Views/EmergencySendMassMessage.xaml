@@ -7,6 +7,11 @@
     <ToolbarItem Name="Send Mass Message" Activated="OnClickSendMassMessage" Order="Secondary" Priority="1" />
     <ToolbarItem Name="Notify Control Centre" Activated="OnClickNotifyControlCentre" Order="Secondary" Priority="2" />
   </ContentPage.ToolbarItems>
+  <ContentPage.Content>
+    <StackLayout  VerticalOptions="Center" HorizontalOptions="Center">
+    
+    </StackLayout>
+  </ContentPage.Content>
 
   
 </ContentPage>

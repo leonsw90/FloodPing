@@ -1,4 +1,8 @@
-﻿using System;
+﻿using FloodPing.Implementations;
+using FloodPing.Views;
+using GalaSoft.MvvmLight.Ioc;
+using GalaSoft.MvvmLight.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +17,15 @@ namespace FloodPing
         {
             // The root page of your application
             //MainPage = new Views.MainPage();
-            MainPage = new NavigationPage(new Views.MainPage());
+            var nav = new NavigationService();
+            nav.Configure(Locator.MainPage, typeof(MainPage));
+            nav.Configure(Locator.SecondPage, typeof(EmergencySendMassMessage));
+            nav.Configure(Locator.ThirdPage, typeof(EmergencySendMessageForm));
+            SimpleIoc.Default.Register<INavigationService>(() => nav);
+            var mainPage = new NavigationPage(new MainPage());
+            nav.Initialize(mainPage);
+            MainPage = mainPage;
+            //MainPage = new NavigationPage(new Views.MainPage());
         }
 
         protected override void OnStart()

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FloodPing.Views.EmergencySendMessageForm"
+             Title="Send Message">
+  <ContentPage.Content>
+    <StackLayout  Padding="5,10">    
+      <Label Text="Send Message to All Stranded Travellers" FontAttributes="Bold" FontSize="Large"/>
+      <Label Text="{Binding StrandedTravellers}" />
+      <Editor Text="{Binding SendMessageText, Mode=TwoWay}" HeightRequest="100" BackgroundColor="#d3d3d3"  />
+      <Button Text="Send Message"  Command="{Binding SendMessageCommand}" />
+      <Label Text="{Binding ToBeSent, Mode=TwoWay}" />
+    </StackLayout>
+  </ContentPage.Content>
+  
+</ContentPage>
