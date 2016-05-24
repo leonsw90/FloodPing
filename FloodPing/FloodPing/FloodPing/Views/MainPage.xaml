@@ -11,6 +11,7 @@
       <Button Text="Emergency - Send Mass Message" Clicked="LaunchEmergencySendMassMessage" />
       <Button Text="Statistics" Clicked="LaunchStatistics" />
       <Button Text="Share Flood Images" Clicked="LaunchShare" />
+      <!--<Button Text="Share Flood Images" Clicked="LaunchShare" />-->
     
     </StackLayout>
   </ContentPage.Content>
