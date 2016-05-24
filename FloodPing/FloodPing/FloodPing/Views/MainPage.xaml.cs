@@ -27,5 +27,11 @@ namespace FloodPing.Views
             // Launch Emergency App
             Navigation.PushAsync(new Views.EmergencySendMassMessage());
         }
+
+        public void LaunchEmergencyMap(object sender, EventArgs args)
+        {
+            // Launch Emergency App
+            Navigation.PushAsync(new EmergencyMap());
+        }
     }
 }

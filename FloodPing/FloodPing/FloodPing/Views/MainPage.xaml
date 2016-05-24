@@ -7,6 +7,7 @@
     <StackLayout VerticalOptions="StartAndExpand" Padding="50">
       <Button Text="Traveller" Clicked="LaunchTraveller" />
       <Button Text="Emergency - Send Mass Message" Clicked="LaunchEmergencySendMassMessage" />
+      <Button Text="Emergency - Map" Clicked="LaunchEmergencyMap" />
     </StackLayout>
   </ContentPage.Content>
 </ContentPage>

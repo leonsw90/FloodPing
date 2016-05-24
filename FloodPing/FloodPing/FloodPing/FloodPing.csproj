@@ -40,6 +40,9 @@
     <Compile Include="Locator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\EmergencySendMessageForm.cs" />
+    <Compile Include="Views\EmergencyMap.xaml.cs">
+      <DependentUpon>EmergencyMap.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EmergencySendMassMessage.xaml.cs">
       <DependentUpon>EmergencySendMassMessage.xaml</DependentUpon>
     </Compile>
@@ -97,6 +100,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\EmergencySendMessageForm.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\EmergencyMap.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
