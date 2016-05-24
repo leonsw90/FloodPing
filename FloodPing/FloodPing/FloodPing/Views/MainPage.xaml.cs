@@ -20,6 +20,7 @@ namespace FloodPing.Views
         public void LaunchTraveller(object sender, EventArgs args)
         {
             // Launch Traveller App
+            Navigation.PushAsync(new Views.FTravellerMain());
         }
 
         public void LaunchEmergencySendMassMessage(object sender, EventArgs args)
@@ -27,5 +28,16 @@ namespace FloodPing.Views
             // Launch Emergency App
             Navigation.PushAsync(new Views.EmergencySendMassMessage());
         }
+        public void LaunchStatistics(object sender, EventArgs args)
+        {
+            // Launch Emergency App
+            Navigation.PushAsync(new Views.ShowStatistics());
+        }
+            public void LaunchShare(object sender, EventArgs args)
+        {
+            // Launch Emergency App
+            Navigation.PushAsync(new Views.SharePics());
+        }
+        }
     }
-}
+

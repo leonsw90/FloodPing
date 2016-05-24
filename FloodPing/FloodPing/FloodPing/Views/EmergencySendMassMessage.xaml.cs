@@ -21,6 +21,7 @@ namespace FloodPing.Views
             
             // Dynamically generate dots on the map.
             // The real map would get GPS location from the straded travellers.
+
             Button button1 = new Button
             {
                 StyleId = (rand.Next()).ToString(),
