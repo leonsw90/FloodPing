@@ -21,6 +21,7 @@ namespace FloodPing
             nav.Configure(Locator.MainPage, typeof(MainPage));
             nav.Configure(Locator.SecondPage, typeof(EmergencySendMassMessage));
             nav.Configure(Locator.ThirdPage, typeof(EmergencySendMessageForm));
+            nav.Configure(Locator.FourthPage, typeof(EmergencyMap));
             SimpleIoc.Default.Register<INavigationService>(() => nav);
             var mainPage = new NavigationPage(new MainPage());
             nav.Initialize(mainPage);
