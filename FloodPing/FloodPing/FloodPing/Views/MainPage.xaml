@@ -12,7 +12,6 @@
 <<<<<<< HEAD
       <Button Text="Statistics" Clicked="LaunchStatistics" />
       <Button Text="Share Flood Images" Clicked="LaunchShare" />
-      <!--<Button Text="Share Flood Images" Clicked="LaunchShare" />-->
     
 =======
       <Button Text="Emergency - Map" Clicked="LaunchEmergencyMap" />
