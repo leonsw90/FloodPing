@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Implementations\NavigationService.cs" />
+    <Compile Include="Interfaces\ISQLite.cs" />
     <Compile Include="Locator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\EmergencySendMessageForm.cs" />
