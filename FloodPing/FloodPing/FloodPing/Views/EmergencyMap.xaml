@@ -5,8 +5,8 @@
              BackgroundImage="MapEmergency.jpg"
              Title="Emergency Map">
   <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center"/>
-  
- 
+
+
   <Button Image="spot.png" ClassId="button1" Clicked="OnButtonClicked" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" WidthRequest="40" HeightRequest="40" BorderWidth="0"></Button>
-  
+
 </ContentPage>

@@ -11,6 +11,23 @@ namespace FloodPing
         public static string MainPage = "MainPage";
         public static string SecondPage = "EmergencySendMassMessage";
         public static string ThirdPage = "EmergencySendMessageForm";
-        public static string FourthPage = "EmergencyMap";
+        public static string EmergencyMapPage = "EmergencyMap";
+        public static string FouthPage = "FTravellerMain";
+        public static string FifthPage = "FTraveller1";
+        public static string SixthPage = "FTraveller2";
+        public static string SevenPage = "FTraveller3";
+        public static string EightPage = "FTraveller4";
+
+        public static string NinthPage = "SharePics";
+        public static string TenthPage = "ShowStatistics";
+
+        public static string EleventhPage = "ShowStatistics";
+
+
+
+
+
+
+
     }
 }

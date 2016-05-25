@@ -12,13 +12,13 @@ namespace FloodPing.Views
     {
         public EmergencyMap()
         {
-            Button button1 = new Button{};
+            Button button1 = new Button { };
             button1.StyleId = "text";
             InitializeComponent();
-            
+
         }
 
-         
+
         void OnButtonClicked(object sender, EventArgs e)
         {
             DisplayAlert("Alert", ((Button)sender).StyleId, "ok");
