@@ -28,6 +28,7 @@ namespace FloodPing.Views
             // Launch Emergency App
             Navigation.PushAsync(new Views.EmergencySendMassMessage());
         }
+<<<<<<< HEAD
         public void LaunchStatistics(object sender, EventArgs args)
         {
             // Launch Emergency App
@@ -38,6 +39,13 @@ namespace FloodPing.Views
             // Launch Emergency App
             Navigation.PushAsync(new Views.SharePics());
         }
+=======
+
+        public void LaunchEmergencyMap(object sender, EventArgs args)
+        {
+            // Launch Emergency App
+            Navigation.PushAsync(new EmergencyMap());
+>>>>>>> master
         }
     }
 

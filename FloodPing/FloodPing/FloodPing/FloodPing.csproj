@@ -40,6 +40,9 @@
     <Compile Include="Locator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\EmergencySendMessageForm.cs" />
+    <Compile Include="Views\EmergencyMap.xaml.cs">
+      <DependentUpon>EmergencyMap.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EmergencySendMassMessage.xaml.cs">
       <DependentUpon>EmergencySendMassMessage.xaml</DependentUpon>
     </Compile>
@@ -126,6 +129,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="Views\FTravellerMain.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
@@ -169,6 +173,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\GraphShowing.xaml">
+=======
+    <EmbeddedResource Include="Views\EmergencyMap.xaml">
+>>>>>>> master
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

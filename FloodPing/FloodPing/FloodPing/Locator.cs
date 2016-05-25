@@ -11,6 +11,7 @@ namespace FloodPing
         public static string MainPage = "MainPage";
         public static string SecondPage = "EmergencySendMassMessage";
         public static string ThirdPage = "EmergencySendMessageForm";
+<<<<<<< HEAD
 
         public static string FouthPage = "FTravellerMain";
         public static string FifthPage = "FTraveller1";
@@ -29,5 +30,8 @@ namespace FloodPing
 
 
 
+=======
+        public static string FourthPage = "EmergencyMap";
+>>>>>>> master
     }
 }
