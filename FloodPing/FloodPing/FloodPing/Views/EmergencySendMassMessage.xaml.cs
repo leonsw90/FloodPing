@@ -30,6 +30,7 @@ namespace FloodPing.Views
                 BackgroundColor = Color.Transparent,
                 WidthRequest = 40,
                 HeightRequest = 40,
+                Scale = 3,
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
@@ -42,6 +43,7 @@ namespace FloodPing.Views
                 BackgroundColor = Color.Transparent,
                 WidthRequest = 40,
                 HeightRequest = 40,
+                Scale = 2,
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
