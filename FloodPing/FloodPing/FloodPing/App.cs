@@ -1,4 +1,5 @@
-﻿using FloodPing.Implementations;
+﻿using FloodPing.Data;
+using FloodPing.Implementations;
 using FloodPing.Views;
 using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Views;
@@ -6,13 +7,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Xamarin.Forms;
+using SQLite;
+using System.Diagnostics;
 
 namespace FloodPing
 {
     public class App : Application
     {
+        static FloodPingDatabase database;
+
         public App()
         {
             // The root page of your application
@@ -32,21 +36,30 @@ namespace FloodPing
 
             nav.Configure(Locator.TenthPage, typeof(GraphShowing));
             nav.Configure(Locator.EmergencyMapPage, typeof(EmergencyMap));
-
-
-
-
-
+            
             SimpleIoc.Default.Register<INavigationService>(() => nav);
             var mainPage = new NavigationPage(new MainPage());
             nav.Initialize(mainPage);
             MainPage = mainPage;
-            //MainPage = new NavigationPage(new Views.MainPage());
+
+            
         }
 
+        public static FloodPingDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new FloodPingDatabase();
+                }
+                return database;
+            }
+        }
+        
         protected override void OnStart()
         {
-            // Handle when your app starts
+          
         }
 
         protected override void OnSleep()

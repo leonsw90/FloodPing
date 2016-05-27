@@ -36,8 +36,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Data\FloodPingDatabase.cs" />
     <Compile Include="Implementations\NavigationService.cs" />
+    <Compile Include="ISQLite.cs" />
     <Compile Include="Locator.cs" />
+    <Compile Include="Models\EmergencyMessages.cs" />
+    <Compile Include="Models\StrandedTravellers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\EmergencySendMessageForm.cs" />
     <Compile Include="Views\EmergencyMap.xaml.cs">
@@ -115,9 +119,7 @@
     <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Views\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
