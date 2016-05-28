@@ -13,11 +13,11 @@ namespace FloodPing.Models
         {
 
         }
-
+        // Table that store the location of the stranded traveller.
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
-        public double stranded_long { get; set; }
-        public double stranded_lat { get; set; }
+        public int stranded_long { get; set; }
+        public int stranded_lat { get; set; }
         public DateTime stranded_orginialtime { get; set; }
         public DateTime stranded_lastupdatetime { get; set; }
     }

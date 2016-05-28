@@ -43,6 +43,7 @@
     <Compile Include="Models\EmergencyMessages.cs" />
     <Compile Include="Models\StrandedTravellers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\EmergencySendMassMessage.cs" />
     <Compile Include="ViewModels\EmergencySendMessageForm.cs" />
     <Compile Include="Views\EmergencyMap.xaml.cs">
       <DependentUpon>EmergencyMap.xaml</DependentUpon>

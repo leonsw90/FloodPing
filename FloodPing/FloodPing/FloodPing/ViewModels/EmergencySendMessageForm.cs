@@ -7,21 +7,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using GalaSoft.MvvmLight.Command;
+using FloodPing.Models;
 
 namespace FloodPing.ViewModels
 {
     public class EmergencySendMessageFormViewModel : ViewModelBase
     {
-        private int noStrandedTravellers = 4;
+        private int noStrandedTravellers = App.Database.StrandedTravellerCount();
         private INavigationService _navigationService;
         
         public EmergencySendMessageFormViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
             SendMessageCommand = new Command(() => SetSendMessage());
-
+            
+            
         }
-
 
         private int _StrandedTravellers;
         public int StrandedTravellers
@@ -70,8 +72,20 @@ namespace FloodPing.ViewModels
 
         public void SetSendMessage()
         {
-            ToBeSent = "Message sent to all users : " + SendMessageText;
+            //ToBeSent = "Message sent to all users : " + SendMessageText;
+
+            EmergencyMessages _message = new EmergencyMessages();
+            _message.message = SendMessageText;
+            _message.message_sentdate = DateTime.Now;
+            _message.messageType = "Broadcast";
+            App.Database.EmergencySaveItem(_message);
+
+            MessagingCenter.Send(this, "BroadcastMessageSent", "The broadcase message has been sent to all the stranded travellers.");
+            _navigationService.NavigateTo(Locator.EmergencySendMassMessagePage);
+
         }
+
+
 
     }
 }

@@ -30,42 +30,32 @@ namespace FloodPing.Data
             
             //Insert the records.
             StrandedTravellers StrandedTraveller = new StrandedTravellers();
-            StrandedTraveller.stranded_lat = -27.596734;
-            StrandedTraveller.stranded_long = 152.949218;
+            StrandedTraveller.stranded_lat = 0;
+            StrandedTraveller.stranded_long = 0;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
             StrandedTraveller.stranded_lastupdatetime = DateTime.Now;
             this.StrandedTravellerSaveItem(StrandedTraveller);
 
             StrandedTraveller.ID = 0;
-            StrandedTraveller.stranded_lat = -27.596735;
-            StrandedTraveller.stranded_long = 152.949212;
+            StrandedTraveller.stranded_lat = 0;
+            StrandedTraveller.stranded_long = 1;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
             StrandedTraveller.stranded_lastupdatetime = DateTime.Now;
             this.StrandedTravellerSaveItem(StrandedTraveller);
 
             StrandedTraveller.ID = 0;
-            StrandedTraveller.stranded_lat = -27.5967334;
-            StrandedTraveller.stranded_long = 152.949215;
+            StrandedTraveller.stranded_lat = 1;
+            StrandedTraveller.stranded_long = 0;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
             StrandedTraveller.stranded_lastupdatetime = DateTime.Now;
             this.StrandedTravellerSaveItem(StrandedTraveller);
 
             StrandedTraveller.ID = 0;
-            StrandedTraveller.stranded_lat = -27.596733;
-            StrandedTraveller.stranded_long = 152.949215;
+            StrandedTraveller.stranded_lat = 1;
+            StrandedTraveller.stranded_long = 1;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
             StrandedTraveller.stranded_lastupdatetime = DateTime.Now;
             this.StrandedTravellerSaveItem(StrandedTraveller);
-        }
-
-        public void StrandedTravellerGetCount()
-        {
-            lock (locker)
-            {
-                var query = database.Query<StrandedTravellers>("SELECT COUNT(*) FROM [StrandedTravellers]");
-
-                
-            }
         }
 
         public int StrandedTravellerSaveItem(StrandedTravellers item)
@@ -84,12 +74,35 @@ namespace FloodPing.Data
             }
         }
 
-        public int StrandedTravellerDeleteAll()
+        public int EmergencySaveItem(EmergencyMessages item)
         {
             lock (locker)
             {
-                return database.DeleteAll<StrandedTravellers>();
+                if (item.ID != 0)
+                {
+                    database.Update(item);
+                    return item.ID;
+                }
+                else
+                {
+                    return database.Insert(item);
+                }
             }
+        }
+
+        public int StrandedTravellerCount ()
+        {
+            var allItems = database.Table<StrandedTravellers>().ToList();
+            return allItems.Count();
+        }
+
+        public IEnumerable<StrandedTravellers> GetStrandedTravellers()
+        {
+            lock (locker)
+            {
+                return database.Table<StrandedTravellers>().ToList();
+            }
+            
         }
 
     }

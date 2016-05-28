@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 using SQLite;
-using System.Diagnostics;
 
 namespace FloodPing
 {
@@ -23,10 +22,11 @@ namespace FloodPing
             //MainPage = new Views.MainPage();
             var nav = new NavigationService();
             nav.Configure(Locator.MainPage, typeof(MainPage));
-            nav.Configure(Locator.SecondPage, typeof(EmergencySendMassMessage));
-            nav.Configure(Locator.ThirdPage, typeof(EmergencySendMessageForm));
-            nav.Configure(Locator.FouthPage, typeof(FTravellerMain));
 
+            // Emergencey Messaging App
+            nav.Configure(Locator.EmergencySendMassMessagePage, typeof(EmergencySendMassMessage));
+
+            nav.Configure(Locator.FouthPage, typeof(FTravellerMain));
             nav.Configure(Locator.FifthPage, typeof(FTraveller1));
             nav.Configure(Locator.SixthPage, typeof(FTraveller2));
             nav.Configure(Locator.SevenPage, typeof(FTraveller3));
@@ -41,10 +41,9 @@ namespace FloodPing
             var mainPage = new NavigationPage(new MainPage());
             nav.Initialize(mainPage);
             MainPage = mainPage;
-
-            
         }
 
+        // Function to connect to the local database.
         public static FloodPingDatabase Database
         {
             get
@@ -59,17 +58,17 @@ namespace FloodPing
         
         protected override void OnStart()
         {
-          
+            // Handle when the app starts
         }
 
         protected override void OnSleep()
         {
-            // Handle when your app sleeps
+            // Handle when the app sleeps
         }
 
         protected override void OnResume()
         {
-            // Handle when your app resumes
+            // Handle when the app resumes
         }
     }
 }

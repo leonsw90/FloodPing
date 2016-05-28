@@ -14,11 +14,13 @@ namespace FloodPing.Models
 
         }
 
+        // Table to locally store the history of broadcast message.
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
-        public string MessageType { get; set; }
-        public string Message { get; set; }
-        
+        public string messageType { get; set; }
+        public string message { get; set; }
+        public DateTime message_sentdate { get; set; }
+
     }
 
 }

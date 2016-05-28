@@ -8,9 +8,13 @@ namespace FloodPing
 {
     class Locator
     {
+
         public static string MainPage = "MainPage";
-        public static string SecondPage = "EmergencySendMassMessage";
-        public static string ThirdPage = "EmergencySendMessageForm";
+        
+        // Define the two Emergency Send Message pages.
+        public static string EmergencySendMassMessagePage = "EmergencySendMassMessage";
+        public static string EmergencySendMessageFormPage = "EmergencySendMessageForm";
+
         public static string EmergencyMapPage = "EmergencyMap";
         public static string FouthPage = "FTravellerMain";
         public static string FifthPage = "FTraveller1";
@@ -20,14 +24,6 @@ namespace FloodPing
 
         public static string NinthPage = "SharePics";
         public static string TenthPage = "ShowStatistics";
-
-        public static string EleventhPage = "ShowStatistics";
-
-
-
-
-
-
-
+        
     }
 }
