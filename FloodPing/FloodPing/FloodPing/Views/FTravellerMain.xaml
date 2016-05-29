@@ -5,11 +5,9 @@
   <!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
 
   <StackLayout >
-    <Label Text="Current Location : Armidale"  BackgroundColor="Gray" FontSize="25" />
-    <Label Text="Enter your destination" BackgroundColor="Gray" FontSize="25">
-    </Label>
-    <Entry Placeholder="Location"/>
-    <Button x:Name ="MyButton"  Text="Enter" Clicked="FTraveller1" FontFamily="Times New Roman"  ></Button>
+    <Label Text="Current Location : Armidale"  BackgroundColor="#d3d3d3"  TextColor="Black" FontSize="25" HorizontalOptions="Center"/>
+    <Entry Placeholder="Enter your destination"  BackgroundColor="#d3d3d3"  FontSize="20"/>
+    <Button x:Name ="MyButton"  Text="Enter" Clicked="FTraveller1" FontAttributes="Bold" FontSize="20" />
     <!--<Image Source="a1.jpg" ></Image>-->
 
   </StackLayout>

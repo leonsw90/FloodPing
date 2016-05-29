@@ -17,6 +17,8 @@ namespace FloodPing.Views
             // Add the map background image
             this.BackgroundImage = "a1.png";
             BindingContext = this;
+
+            this.Title = "Journey Planner";
             
         }
 
