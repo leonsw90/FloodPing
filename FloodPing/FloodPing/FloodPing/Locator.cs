@@ -15,6 +15,7 @@ namespace FloodPing
         public static string EmergencyStrandedTravellersPage = "EmergencyStrandedTravellers";
         public static string EmergencySendMessageFormPage = "EmergencySendMessageForm";
         public static string EmergencyViewMessageHistoryPage = "EmergencyViewMessageHistory";
+        public static string MapDetailPage = "MapDetail";
 
         public static string EmergencyMapPage = "EmergencyMap";
         public static string FouthPage = "FTravellerMain";

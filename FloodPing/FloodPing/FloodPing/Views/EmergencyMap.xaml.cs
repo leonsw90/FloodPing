@@ -21,7 +21,7 @@ namespace FloodPing.Views
 
         void OnButtonClicked(object sender, EventArgs e)
         {
-            DisplayAlert("Alert", ((Button)sender).StyleId, "ok");
+            Navigation.PushAsync(new MapDetail());
         }
     }
 }

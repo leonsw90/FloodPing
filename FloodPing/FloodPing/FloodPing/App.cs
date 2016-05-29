@@ -33,7 +33,7 @@ namespace FloodPing
             nav.Configure(Locator.EightPage, typeof(FTraveller4));
             nav.Configure(Locator.NinthPage, typeof(ShowStatistics));
             nav.Configure(Locator.TenthPage, typeof(SharePics));
-
+            nav.Configure(Locator.MapDetailPage, typeof(MapDetail));
             nav.Configure(Locator.TenthPage, typeof(GraphShowing));
             nav.Configure(Locator.EmergencyMapPage, typeof(EmergencyMap));
             
