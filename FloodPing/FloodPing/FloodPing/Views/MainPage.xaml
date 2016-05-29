@@ -8,7 +8,7 @@
     <StackLayout VerticalOptions="StartAndExpand" Padding="50">
       
       <Button Text="Traveller" Clicked="LaunchTraveller" />
-      <Button Text="Emergency - Send Mass Message" Clicked="LaunchEmergencySendMassMessage" />
+      <Button Text="Emergency - Send Mass Message" Clicked="LaunchEmergencyStrandedTravellers" />
       <Button Text="Statistics" Clicked="LaunchStatistics" />
       <Button Text="Share Flood Images" Clicked="LaunchShare" />
       <Button Text="Emergency - Map" Clicked="LaunchEmergencyMap" />

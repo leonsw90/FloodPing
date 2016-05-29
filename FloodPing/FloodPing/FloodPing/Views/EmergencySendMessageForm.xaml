@@ -5,11 +5,11 @@
              Title="Send Message">
   <ContentPage.Content>
     <StackLayout  Padding="5,10">    
-      <Label Text="Send Message to All Stranded Travellers" FontAttributes="Bold" FontSize="Large"/>
-      <Label Text="{Binding StrandedTravellers}" />
+      <Label Text="Broadcast Message to All Stranded Travellers" FontAttributes="Bold" FontSize="Large"/>
+      <Label Text="{Binding StrandedTravellers, StringFormat='There are {0:F0} stranded travellers.'}" />
       <Editor Text="{Binding SendMessageText, Mode=TwoWay}" HeightRequest="100" BackgroundColor="#d3d3d3"  />
       <Button Text="Send Message"  Command="{Binding SendMessageCommand}" />
-      <Label Text="{Binding ToBeSent, Mode=TwoWay}" />
+      <Label Text="{Binding ToBeSent}" />
     </StackLayout>
   </ContentPage.Content>
   
