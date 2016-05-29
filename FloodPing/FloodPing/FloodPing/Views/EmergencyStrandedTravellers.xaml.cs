@@ -14,14 +14,14 @@ using FloodPing.Data;
 
 namespace FloodPing.Views
 {
-    public partial class EmergencySendMassMessage : ContentPage
+    public partial class EmergencyStrandedTravellers : ContentPage
     {
-        public EmergencySendMassMessage()
+        public EmergencyStrandedTravellers()
         {
             InitializeComponent();
 
             // Bind the view to the viewModel
-            BindingContext = new EmergencySendMassMessageViewModel(SimpleIoc.Default.GetInstance<INavigationService>());
+            BindingContext = new EmergencyStrandedTravellersViewModel(SimpleIoc.Default.GetInstance<INavigationService>());
             
             // Add the map background image
             this.BackgroundImage = "map.png";
@@ -99,6 +99,13 @@ namespace FloodPing.Views
             
         }
 
+        public void ViewBroadcastHistory(object sender, EventArgs args)
+        {
+            // Launch Emergency Message Form
+            Navigation.PushAsync(new Views.EmergencyViewMessageHistory());
+
+        }
+        
         // Method to display alert with the message.
         // The proper applicatio will have a bind to the ModelView to handle the logic.
         public void NotifyControlCentre(object sender, EventArgs args)

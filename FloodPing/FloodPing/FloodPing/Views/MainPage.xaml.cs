@@ -23,10 +23,10 @@ namespace FloodPing.Views
             Navigation.PushAsync(new Views.FTravellerMain());
         }
 
-        public void LaunchEmergencySendMassMessage(object sender, EventArgs args)
+        public void LaunchEmergencyStrandedTravellers(object sender, EventArgs args)
         {
             // Launch Emergency App
-            Navigation.PushAsync(new Views.EmergencySendMassMessage());
+            Navigation.PushAsync(new Views.EmergencyStrandedTravellers());
         }
         public void LaunchStatistics(object sender, EventArgs args)
         {

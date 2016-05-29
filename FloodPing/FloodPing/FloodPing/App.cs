@@ -24,7 +24,7 @@ namespace FloodPing
             nav.Configure(Locator.MainPage, typeof(MainPage));
 
             // Emergencey Messaging App
-            nav.Configure(Locator.EmergencySendMassMessagePage, typeof(EmergencySendMassMessage));
+            nav.Configure(Locator.EmergencyStrandedTravellersPage, typeof(EmergencyStrandedTravellers));
 
             nav.Configure(Locator.FouthPage, typeof(FTravellerMain));
             nav.Configure(Locator.FifthPage, typeof(FTraveller1));

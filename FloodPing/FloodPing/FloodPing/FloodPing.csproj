@@ -43,16 +43,19 @@
     <Compile Include="Models\EmergencyMessages.cs" />
     <Compile Include="Models\StrandedTravellers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\EmergencySendMassMessage.cs" />
+    <Compile Include="ViewModels\EmergencyStrandedTravellers.cs" />
     <Compile Include="ViewModels\EmergencySendMessageForm.cs" />
     <Compile Include="Views\EmergencyMap.xaml.cs">
       <DependentUpon>EmergencyMap.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\EmergencySendMassMessage.xaml.cs">
-      <DependentUpon>EmergencySendMassMessage.xaml</DependentUpon>
+    <Compile Include="Views\EmergencyStrandedTravellers.xaml.cs">
+      <DependentUpon>EmergencyStrandedTravellers.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\EmergencySendMessageForm.xaml.cs">
       <DependentUpon>EmergencySendMessageForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmergencyViewMessageHistory.xaml.cs">
+      <DependentUpon>EmergencyViewMessageHistory.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FTraveller1.xaml.cs">
       <DependentUpon>FTraveller1.xaml</DependentUpon>
@@ -120,7 +123,12 @@
     <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Views\EmergencyViewMessageHistory.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -128,7 +136,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\EmergencySendMassMessage.xaml">
+    <EmbeddedResource Include="Views\EmergencyStrandedTravellers.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

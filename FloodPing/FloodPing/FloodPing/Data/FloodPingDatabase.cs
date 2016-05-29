@@ -22,6 +22,11 @@ namespace FloodPing.Data
             database.CreateTable<EmergencyMessages>();
             
             // Create the stranded traveller table.
+            // This reset the records every time the app is started to
+            // simulate strandeed travellers.
+            // 
+            // In real situation this is likely to be a web server to
+            // retrieve this information from the central servers.
             database.DropTable<StrandedTravellers>();
             database.CreateTable<StrandedTravellers>();
 
@@ -58,6 +63,7 @@ namespace FloodPing.Data
             this.StrandedTravellerSaveItem(StrandedTraveller);
         }
 
+        // Method to insert or update stranded travellers.
         public int StrandedTravellerSaveItem(StrandedTravellers item)
         {
             lock (locker)
@@ -74,7 +80,8 @@ namespace FloodPing.Data
             }
         }
 
-        public int EmergencySaveItem(EmergencyMessages item)
+        // Method to insert or update messages sent from the app.
+        public int EmergencyMessageSaveItem(EmergencyMessages item)
         {
             lock (locker)
             {
@@ -90,12 +97,14 @@ namespace FloodPing.Data
             }
         }
 
+        // Method that returns the total number of stranded travllers.
         public int StrandedTravellerCount ()
         {
             var allItems = database.Table<StrandedTravellers>().ToList();
             return allItems.Count();
         }
 
+        // Method that returns a list of all the stranded travellers.
         public IEnumerable<StrandedTravellers> GetStrandedTravellers()
         {
             lock (locker)
@@ -105,5 +114,13 @@ namespace FloodPing.Data
             
         }
 
+        public IEnumerable<EmergencyMessages> GetEmergencyMessages()
+        {
+            lock (locker)
+            {
+                return database.Table<EmergencyMessages>().ToList();
+            }
+
+        }
     }
 }
