@@ -6,7 +6,6 @@
   <ContentPage.ToolbarItems>
     <ToolbarItem Name="Broadcast Message" Activated="BroadcastMessage" Order="Secondary" Priority="1" />
     <ToolbarItem Name="History of Broadcast Messages" Activated="ViewBroadcastHistory" Order="Secondary" Priority="2" />
-    <ToolbarItem Name="Notify Control Centre" Activated="NotifyControlCentre" Order="Secondary" Priority="3" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     

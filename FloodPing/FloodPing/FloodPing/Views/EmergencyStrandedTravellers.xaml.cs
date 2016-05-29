@@ -106,13 +106,5 @@ namespace FloodPing.Views
 
         }
         
-        // Method to display alert with the message.
-        // The proper applicatio will have a bind to the ModelView to handle the logic.
-        public void NotifyControlCentre(object sender, EventArgs args)
-        {
-            DisplayAlert("Send Message to Control Centre", "This option will send a message to the control centre. This function has not been implemented because conceputally it will work the same as sending the message to standed travllers.", "OK");
-        }
-        
-
     }
 }
