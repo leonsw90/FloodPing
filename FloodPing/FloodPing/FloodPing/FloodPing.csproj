@@ -41,10 +41,12 @@
     <Compile Include="ISQLite.cs" />
     <Compile Include="Locator.cs" />
     <Compile Include="Models\EmergencyMessages.cs" />
+    <Compile Include="Models\LocationsNames.cs" />
     <Compile Include="Models\StrandedTravellers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\EmergencyStrandedTravellers.cs" />
     <Compile Include="ViewModels\EmergencySendMessageForm.cs" />
+    <Compile Include="ViewModels\LocationNamesViewModel.cs" />
     <Compile Include="Views\EmergencyMap.xaml.cs">
       <DependentUpon>EmergencyMap.xaml</DependentUpon>
     </Compile>

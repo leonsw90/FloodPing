@@ -12,11 +12,12 @@ namespace FloodPing.Views
     {
         public FTravellerMain()
         {
+            InitializeComponent();
+
             // Add the map background image
             this.BackgroundImage = "a1.png";
             BindingContext = this;
-
-            InitializeComponent();
+            
         }
 
         public void FTraveller1(object sender, EventArgs args)

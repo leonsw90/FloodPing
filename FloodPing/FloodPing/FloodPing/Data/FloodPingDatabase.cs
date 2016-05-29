@@ -20,6 +20,7 @@ namespace FloodPing.Data
             database = DependencyService.Get<ISQLite>().GetConnection();
             // create the messages table
             database.CreateTable<EmergencyMessages>();
+            database.CreateTable<LocationsNames>();
             
             // Create the stranded traveller table.
             // This reset the records every time the app is started to
@@ -61,6 +62,15 @@ namespace FloodPing.Data
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
             StrandedTraveller.stranded_lastupdatetime = DateTime.Now;
             this.StrandedTravellerSaveItem(StrandedTraveller);
+
+
+            // Table to store the locations of the subhurbs
+            LocationsNames LocationsNames = new LocationsNames();
+            LocationsNames.Name = "Ipshwich";
+            LocationsNames.Address = "Adress 1, City";
+            this.LocationSaveItem(LocationsNames);
+
+
         }
 
         // Method to insert or update stranded travellers.
@@ -122,5 +132,28 @@ namespace FloodPing.Data
             }
 
         }
+
+
+        /// Method to save the subhurb data int database
+        ///
+
+        public int LocationSaveItem(LocationsNames item)
+        {
+            lock (locker)
+            {
+                if (item.ID != 0)
+                {
+                    database.Update(item);
+                    return item.ID;
+                }
+                else
+                {
+                    return database.Insert(item);
+                }
+            }
+        }
+
+
+
     }
 }
