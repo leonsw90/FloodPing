@@ -1,4 +1,4 @@
-﻿ using FloodPing.Implementations;
+﻿using FloodPing.Implementations;
 using FloodPing.ViewModels;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
