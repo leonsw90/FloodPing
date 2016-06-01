@@ -12,17 +12,18 @@ namespace FloodPing.Views
     {
         public FTraveller2()
         {
-            this.BackgroundImage = "a3.jpg";
+            this.BackgroundImage = "mroute.jpg";
             BindingContext = this;
 
             InitializeComponent();
+            this.Title = "Journey Planner";
         }
 
-        public void LaunchFTraveller3(object sender, EventArgs args)
-        {
-            // Launch Emergency App
-            Navigation.PushAsync(new Views.FTraveller3());
-        }
+        //public void LaunchFTraveller3(object sender, EventArgs args)
+        //{
+        //    // Launch Emergency App
+        //    Navigation.PushAsync(new Views.FTraveller3());
+        //}
 
 
     }

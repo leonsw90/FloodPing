@@ -5,8 +5,8 @@
   <!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
 
   <StackLayout>
-    <Label Text="Warning : Flood Area" TextColor="Red" FontSize="35" ></Label>
-    <Button x:Name ="MyButton"  Text="Change Route" Clicked="LaunchFTraveller3" FontFamily="Times New Roman" ></Button>
+    <!--<Label Text="Warning : Flood Area" TextColor="Red" FontSize="35" ></Label>-->
+    <Button x:Name ="MyButton"  Text="Start Journey"  FontAttributes="Bold" FontSize="20" ></Button>
     
       
     
