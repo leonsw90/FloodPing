@@ -43,6 +43,7 @@
     <Compile Include="Models\EmergencyMessages.cs" />
     <Compile Include="Models\LocationsNames.cs" />
     <Compile Include="Models\StrandedTravellers.cs" />
+    <Compile Include="Models\TravellerDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\EmergencyMap.cs" />
     <Compile Include="ViewModels\EmergencyStrandedTravellers.cs" />

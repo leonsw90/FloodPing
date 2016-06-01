@@ -21,12 +21,11 @@ namespace FloodPing.ViewModels
 
         public EmergencyMapViewModel(int strandedId)
         {
-            _strandedId = strandedId;
+            _strandedId = strandedId;//get the detail of the person stranded
+            
             
             
 
-            // Set the method that handles sending of the messages.
-            SendMessageCommand = new Command(() => SetSendMessage());
         }
 
         // Get the total number of stranded travellers.
