@@ -20,6 +20,8 @@ namespace FloodPing.Models
         public int stranded_lat { get; set; }
         public DateTime stranded_orginialtime { get; set; }
         public DateTime stranded_lastupdatetime { get; set; }
+        public string traveller_name { get; set; }
+        public string emergency_detail { get; set; }
     }
 
 }

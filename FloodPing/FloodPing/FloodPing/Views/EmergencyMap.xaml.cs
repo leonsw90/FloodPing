@@ -65,13 +65,18 @@ namespace FloodPing.Views
                     Image = "spot.png",
                     BorderWidth = 0,
                     BackgroundColor = Color.Transparent,
+                    AnchorX = 0,
+                    AnchorY = 0,
+                    TranslationY = t.stranded_long*0.1,
+                    TranslationX = t.stranded_lat*0.1,
                     WidthRequest = 40,
                     HeightRequest = 40,
                     Scale = 3,
                     HorizontalOptions = LayoutOptions.FillAndExpand
                 };
                 b.Clicked += OnButtonClicked;
-
+                System.Diagnostics.Debug.WriteLine("StyleID:");
+                System.Diagnostics.Debug.WriteLine(b.StyleId);
                 grid.Children.Add(b, t.stranded_long, t.stranded_lat);
 
             }
@@ -85,7 +90,9 @@ namespace FloodPing.Views
 
         void OnButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MapDetail());
+            string id = ((Button)sender).StyleId;
+            int travellerID = Int32.Parse(id);
+            Navigation.PushAsync(new MapDetail(travellerID));
         }
     }
 }

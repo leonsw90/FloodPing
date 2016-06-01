@@ -75,26 +75,26 @@ namespace FloodPing.Data
             
             this.TravellerDetailSaveItem(travellerDetail);
 
-            StrandedTraveller.ID = 0;
+            travellerDetail.ID = 0;
             travellerDetail.traveller_name = "Jess";
-            travellerDetail.stranded_lat = 3;
+            travellerDetail.stranded_lat = 1;
             travellerDetail.stranded_long = 0;
             travellerDetail.emergency_detail = "Car trapped in flood";
 
             this.TravellerDetailSaveItem(travellerDetail);
 
-            StrandedTraveller.ID = 0;
+            travellerDetail.ID = 0;
             travellerDetail.traveller_name = "John";
             travellerDetail.stranded_lat = 0;
-            travellerDetail.stranded_long = 3;
+            travellerDetail.stranded_long = 1;
             travellerDetail.emergency_detail = "Car trapped in mud flood";
 
             this.TravellerDetailSaveItem(travellerDetail);
 
-            StrandedTraveller.ID = 0;
+            travellerDetail.ID = 0;
             travellerDetail.traveller_name = "Rock";
-            travellerDetail.stranded_lat = 3;
-            travellerDetail.stranded_long = 3;
+            travellerDetail.stranded_lat = 1;
+            travellerDetail.stranded_long = 1;
             travellerDetail.emergency_detail = "Trapped in house, big flood aoutside";
 
             this.TravellerDetailSaveItem(travellerDetail);
