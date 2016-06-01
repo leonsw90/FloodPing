@@ -20,7 +20,7 @@ namespace FloodPing.Views
             _messages = new ListView();
             _messages.ItemsSource = messages;
             _messages.ItemTemplate = new DataTemplate(typeof(TextCell));
-            _messages.ItemTemplate.SetBinding(TextCell.TextProperty, "messageType");
+            _messages.ItemTemplate.SetBinding(TextCell.TextProperty, "message_sentdate");
             _messages.ItemTemplate.SetBinding(TextCell.DetailProperty, "message");
 
             Content = _messages;
