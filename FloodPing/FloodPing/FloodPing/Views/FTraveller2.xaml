@@ -6,7 +6,7 @@
 
   <StackLayout>
     <!--<Label Text="Warning : Flood Area" TextColor="Red" FontSize="35" ></Label>-->
-    <Button x:Name ="MyButton"  Text="Start Journey"  FontAttributes="Bold" FontSize="20" ></Button>
+    <Button x:Name ="MyButton"  Text="Start Journey" Clicked="LaunchFTraveller3" FontAttributes="Bold" FontSize="20" ></Button>
     
       
     
