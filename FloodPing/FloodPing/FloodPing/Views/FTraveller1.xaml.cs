@@ -16,6 +16,8 @@ namespace FloodPing.Views
             BindingContext = this;
 
             InitializeComponent();
+
+            this.Title = "Journey Planner";
         }
 
         public void LaunchFTraveller2(object sender, EventArgs args)

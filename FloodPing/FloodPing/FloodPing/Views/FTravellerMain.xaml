@@ -6,8 +6,8 @@
 
   <StackLayout >
     <Label Text="Current Location : Armidale"  BackgroundColor="#d3d3d3"  TextColor="Black" FontSize="25" HorizontalOptions="Center"/>
-    <Entry Placeholder="Enter your destination"  BackgroundColor="#d3d3d3"  FontSize="20"/>
-    <Button x:Name ="MyButton"  Text="Enter" Clicked="FTraveller1" FontAttributes="Bold" FontSize="20" />
+    <Entry Placeholder="Enter your destination"  BackgroundColor="White"  FontSize="20" />
+    <Button x:Name ="MyButton"  Text="Enter" Clicked="FTraveller1" FontAttributes="Bold" FontSize="20"  />
     <!--<Image Source="a1.jpg" ></Image>-->
 
   </StackLayout>

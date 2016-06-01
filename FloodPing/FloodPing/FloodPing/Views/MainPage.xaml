@@ -5,13 +5,13 @@
              x:Class="FloodPing.Views.MainPage"
              Title="FloodPing - Select User">
   <ContentPage.Content>
-    <StackLayout VerticalOptions="StartAndExpand" Padding="50">
+    <StackLayout VerticalOptions="Center" Padding="50">
       
-      <Button Text="Traveller" Clicked="LaunchTraveller" />
-      <Button Text="Emergency - Send Mass Message" Clicked="LaunchEmergencyStrandedTravellers" />
-      <Button Text="Statistics" Clicked="LaunchStatistics" />
-      <Button Text="Share Flood Images" Clicked="LaunchShare" />
-      <Button Text="Emergency - Map" Clicked="LaunchEmergencyMap" />
+      <Button Text="Traveller" Clicked="LaunchTraveller" FontAttributes="Bold"/>
+      <Button Text="Emergency - Send Mass Message" Clicked="LaunchEmergencyStrandedTravellers" FontAttributes="Bold" />
+      <Button Text="Statistics" Clicked="LaunchStatistics" FontAttributes="Bold" />
+      <Button Text="Share Flood Images" Clicked="LaunchShare"  FontAttributes="Bold"/>
+      <Button Text="Emergency - Map" Clicked="LaunchEmergencyMap" FontAttributes="Bold" />
       <!--<Button Text="Share Flood Images" Clicked="LaunchShare" />-->
     
     </StackLayout>

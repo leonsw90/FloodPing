@@ -15,6 +15,8 @@ namespace FloodPing.Views
         public MainPage()
         {
             InitializeComponent();
+
+            this.BackgroundColor = Color.Black;
         }
 
         public void LaunchTraveller(object sender, EventArgs args)
