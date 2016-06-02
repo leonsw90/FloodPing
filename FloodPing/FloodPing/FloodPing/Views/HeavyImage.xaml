@@ -3,8 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FloodPing.Views.HeavyImage">
   <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
-  <Label TextColor="#77d065" FontSize ="20" Text="Location: 12, De Mille St, McDowall, QLD"></Label>
+  <StackLayout>
+  <Label TextColor="Blue" FontSize ="20" Text="Location: 12, De Mille St, McDowall, QLD"></Label>
   <Image Source="flood.jpg"></Image>
-  <Label TextColor="#77d066" FontSize="10" Text="Heavy Flood"></Label>
-  
+  <Label TextColor="Fuchsia" FontSize="10" Text="Heavy Flood"></Label>
+  </StackLayout>
 </ContentPage>
