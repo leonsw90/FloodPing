@@ -5,5 +5,5 @@
   <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
   <Label TextColor="#77d065" FontSize ="20" Text="Location: 12, De Mille St, McDowall, QLD"></Label>
   <Image Source="flood.jpg"></Image>
-  <Label TextColor="#77d065" FontSize="10" Text="Medium Flood"></Label>
+  <Label TextColor="#77d065" FontSize="11" Text="Medium Flood"></Label>
 </ContentPage>
