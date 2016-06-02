@@ -36,7 +36,12 @@ namespace FloodPing
             nav.Configure(Locator.MapDetailPage, typeof(MapDetail));
             nav.Configure(Locator.TenthPage, typeof(GraphShowing));
             nav.Configure(Locator.EmergencyMapPage, typeof(EmergencyMap));
-            
+            nav.Configure(Locator.Heavy, typeof(HeavyImage));
+            nav.Configure(Locator.Light, typeof(LightImage));
+            nav.Configure(Locator.Medium, typeof(MediumImage));
+            nav.Configure(Locator.Facebook, typeof(Facebook));
+
+
             SimpleIoc.Default.Register<INavigationService>(() => nav);
             var mainPage = new NavigationPage(new MainPage());
             nav.Initialize(mainPage);

@@ -15,7 +15,27 @@ namespace FloodPing.Views
             InitializeComponent();
             Title = "Share Pictures";
         }
+        public void HeavyTag(object sender, EventArgs args)
+        {
+            // Launch Emergency App
+            Navigation.PushAsync(new Views.HeavyImage());
+        }
+        public void MediumTag(object sender, EventArgs args)
+        {
+            // Launch Emergency App
+            Navigation.PushAsync(new Views.MediumImage());
+        }
+        public void LightTag(object sender, EventArgs args)
+        {
+            // Launch Emergency App
+            Navigation.PushAsync(new Views.LightImage());
+        }
+        public void Facebooked(object sender, EventArgs args)
+        {
+            // Launch Emergency App
+            Navigation.PushAsync(new Views.Facebook());
+        }
+
+
     }
-
-
 }

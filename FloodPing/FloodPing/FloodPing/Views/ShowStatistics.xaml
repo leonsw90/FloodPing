@@ -6,6 +6,7 @@
   <StackLayout>
 
     <Label Text="Country"></Label>
+    
     <Editor Text="Australia"></Editor>
     <Label Text="State:"/>
     <Editor Text="QLD"/>
