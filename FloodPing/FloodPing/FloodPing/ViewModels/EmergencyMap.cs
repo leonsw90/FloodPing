@@ -9,6 +9,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using GalaSoft.MvvmLight.Command;
 using FloodPing.Models;
+using FloodPing.Data;
 
 namespace FloodPing.ViewModels
 {
@@ -18,13 +19,23 @@ namespace FloodPing.ViewModels
         private int _strandedId;
         private string _strandedName;
         private string _strandedLocation;
+        //private StrandedTravellers travellerDetail;
 
         public EmergencyMapViewModel(int strandedId)
         {
             _strandedId = strandedId;//get the detail of the person stranded
+
+            System.Diagnostics.Debug.WriteLine("val: ");
+            System.Diagnostics.Debug.WriteLine(strandedId);
+            var travellerDetail = App.Database.GetTravellerDetail(strandedId);
             
-            
-            
+                System.Diagnostics.Debug.WriteLine("traveller name: ");
+            System.Diagnostics.Debug.WriteLine(travellerDetail.traveller_name);
+
+
+
+
+
 
         }
 

@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using FloodPing.Data;
 
-using Xamarin.Forms;
 
 namespace FloodPing.Views
 {
@@ -53,7 +52,7 @@ namespace FloodPing.Views
             };
 
             // Retriveve the list of stranded travellers.
-            var TravellerDetail = App.Database.GetTravellerDetail();
+            var TravellerDetail = App.Database.GetStrandedTravellers();
 
             // Loop through the list of travellers and create
             // dots on the map.
@@ -63,20 +62,22 @@ namespace FloodPing.Views
                 {
                     StyleId = (t.ID).ToString(),
                     Image = "spot.png",
-                    BorderWidth = 0,
-                    BackgroundColor = Color.Transparent,
+                    BorderWidth = 5,
+                    BackgroundColor = Color.Red,
                     AnchorX = 0,
                     AnchorY = 0,
-                    TranslationY = t.stranded_long*0.1,
-                    TranslationX = t.stranded_lat*0.1,
-                    WidthRequest = 40,
-                    HeightRequest = 40,
+                    TranslationY = t.stranded_long,
+                    TranslationX = t.stranded_lat,
+                    WidthRequest = 5,
+                    HeightRequest = 5,
                     Scale = 3,
-                    HorizontalOptions = LayoutOptions.FillAndExpand
+                    HorizontalOptions = LayoutOptions.Center,
+                    VerticalOptions = LayoutOptions.Center
+
+                    //HorizontalOptions = LayoutOptions.FillAndExpand
                 };
                 b.Clicked += OnButtonClicked;
-                System.Diagnostics.Debug.WriteLine("StyleID:");
-                System.Diagnostics.Debug.WriteLine(b.StyleId);
+                
                 grid.Children.Add(b, t.stranded_long, t.stranded_lat);
 
             }

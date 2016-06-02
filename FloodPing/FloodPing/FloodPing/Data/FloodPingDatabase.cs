@@ -43,6 +43,8 @@ namespace FloodPing.Data
             StrandedTraveller.stranded_long = 0;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
             StrandedTraveller.stranded_lastupdatetime = DateTime.Now;
+            StrandedTraveller.traveller_name = "Jane";
+            StrandedTraveller.emergency_detail = "Trapped in car, middle of road.";
             this.StrandedTravellerSaveItem(StrandedTraveller);
 
             StrandedTraveller.ID = 0;
@@ -50,6 +52,8 @@ namespace FloodPing.Data
             StrandedTraveller.stranded_long = 1;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
             StrandedTraveller.stranded_lastupdatetime = DateTime.Now;
+            StrandedTraveller.traveller_name = "John";
+            StrandedTraveller.emergency_detail = "Trapped in road, no exit.";
             this.StrandedTravellerSaveItem(StrandedTraveller);
 
             StrandedTraveller.ID = 0;
@@ -57,6 +61,8 @@ namespace FloodPing.Data
             StrandedTraveller.stranded_long = 0;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
             StrandedTraveller.stranded_lastupdatetime = DateTime.Now;
+            StrandedTraveller.traveller_name = "Mike";
+            StrandedTraveller.emergency_detail = "Stuck in house,no way out.";
             this.StrandedTravellerSaveItem(StrandedTraveller);
 
             StrandedTraveller.ID = 0;
@@ -64,41 +70,9 @@ namespace FloodPing.Data
             StrandedTraveller.stranded_long = 1;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
             StrandedTraveller.stranded_lastupdatetime = DateTime.Now;
+            StrandedTraveller.traveller_name = "Jane";
+            StrandedTraveller.emergency_detail = "Trapped in car.";
             this.StrandedTravellerSaveItem(StrandedTraveller);
-
-            //Traveller detail input
-            TravellerDetail travellerDetail = new TravellerDetail();
-            travellerDetail.traveller_name = "Jane";
-            travellerDetail.stranded_lat = 0;
-            travellerDetail.stranded_long = 0;
-            travellerDetail.emergency_detail = "Trapped in a flash flood";
-            
-            this.TravellerDetailSaveItem(travellerDetail);
-
-            travellerDetail.ID = 0;
-            travellerDetail.traveller_name = "Jess";
-            travellerDetail.stranded_lat = 1;
-            travellerDetail.stranded_long = 0;
-            travellerDetail.emergency_detail = "Car trapped in flood";
-
-            this.TravellerDetailSaveItem(travellerDetail);
-
-            travellerDetail.ID = 0;
-            travellerDetail.traveller_name = "John";
-            travellerDetail.stranded_lat = 0;
-            travellerDetail.stranded_long = 1;
-            travellerDetail.emergency_detail = "Car trapped in mud flood";
-
-            this.TravellerDetailSaveItem(travellerDetail);
-
-            travellerDetail.ID = 0;
-            travellerDetail.traveller_name = "Rock";
-            travellerDetail.stranded_lat = 1;
-            travellerDetail.stranded_long = 1;
-            travellerDetail.emergency_detail = "Trapped in house, big flood aoutside";
-
-            this.TravellerDetailSaveItem(travellerDetail);
-
 
             // Table to store the locations of the subhurbs
             LocationsNames LocationsNames = new LocationsNames();
@@ -183,6 +157,14 @@ namespace FloodPing.Data
                 return database.Table<TravellerDetail>().ToList();
             }
 
+        }
+
+        public StrandedTravellers GetTravellerDetail(int ID)
+        {
+            lock (locker)
+            {
+                return database.Get<StrandedTravellers>(ID);
+            }
         }
 
         public IEnumerable<EmergencyMessages> GetEmergencyMessages()
