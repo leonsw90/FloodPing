@@ -12,6 +12,7 @@
       <Button Text="Statistics" Clicked="LaunchStatistics" FontAttributes="Bold" />
       <Button Text="Share Flood Images" Clicked="LaunchShare"  FontAttributes="Bold"/>
       <Button Text="Emergency - Map" Clicked="LaunchEmergencyMap" FontAttributes="Bold" />
+      <Button Text="Flood Alert" Clicked="LaunchFloodAlert" FontAttributes="Bold" />
       <!--<Button Text="Share Flood Images" Clicked="LaunchShare" />-->
     
     </StackLayout>
