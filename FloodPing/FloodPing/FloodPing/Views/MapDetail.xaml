@@ -9,11 +9,11 @@
     <Label Text=" " />
     <Label Text=" " />
     <Label Text=" " />
-    <Label Text="Name :" />
-    <Label Text="{Binding StrandedName, StringFormat='Name: {0:F0}'}" />
+    <Label Text="{Binding strandedName, StringFormat='Name: {0:F0}'}" />
     <Label Text="Location :" />
-    <Label Text="{Binding StrandedLocation, StringFormat='Location: {0:F0}'}" />
+    <Label Text="{Binding strandedLocationLat, StringFormat='Lat : {0:F0}'}" />
+    <Label Text="{Binding strandedLocationLong, StringFormat='Long: {0:F0}'}" />
     <Label Text="Info :" />
-    <Label Text="{Binding StrandedInfo, StringFormat='Info: {0:F0}'}" />
+    <Label Text="{Binding strandedDetail, StringFormat='{0:F0}'}" />
   </StackLayout>
 </ContentPage>
