@@ -12,7 +12,7 @@ namespace FloodPing.Views
     {
         public GraphShowing()
         {
-            this.BackgroundImage = "graph1.JPG";
+            this.BackgroundImage = "graphnew.png";
             BindingContext = this;
 
             InitializeComponent();
