@@ -38,7 +38,7 @@ namespace FloodPing.ViewModels
 
         // Get the total number of stranded travellers.
         private int noStrandedTravellers = App.Database.StrandedTravellerCount();
-        private INavigationService _navigationService;
+        //private INavigationService _navigationService;
         public ICommand SendMessageCommand { get; private set; }
 
 
@@ -147,19 +147,7 @@ namespace FloodPing.ViewModels
         // Method that saves the message into the database.
         // Displays a message on the app.
         // Returns to the Stranded Travellers page.
-        public void SetSendMessage()
-        {
-            EmergencyMessages _message = new EmergencyMessages();
-            _message.message = SendMessageText;
-            _message.message_sentdate = DateTime.Now;
-            _message.messageType = "Broadcast";
-            App.Database.EmergencyMessageSaveItem(_message);
-
-            MessagingCenter.Send(this, "BroadcastMessageSent", "The broadcase message has been sent to all the stranded travellers.");
-            _navigationService.GoBack();
-
-        }
-
+       
 
 
     }
