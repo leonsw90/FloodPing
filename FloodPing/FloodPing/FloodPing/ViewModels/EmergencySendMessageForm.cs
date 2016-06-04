@@ -71,7 +71,7 @@ namespace FloodPing.ViewModels
             App.Database.EmergencyMessageSaveItem(_message);
 
             MessagingCenter.Send(this, "BroadcastMessageSent", "The broadcase message has been sent to all the stranded travellers.");
-            //_navigationService.GoBack();
+            _navigationService.GoBack();
 
         }
 
