@@ -21,7 +21,8 @@ namespace FloodPing.Data
             // create the messages table
             database.CreateTable<EmergencyMessages>();
             database.CreateTable<LocationsNames>();
-            
+            database.CreateTable<Events>();
+
             // Create the stranded traveller table.
             // This reset the records every time the app is started to
             // simulate strandeed travellers.
@@ -37,8 +38,20 @@ namespace FloodPing.Data
             // For the purposes of the MVP, reset the stranded customers when the app
             // has been started.
 
+            // Create an event
+            var eventID = 1;
+            Events NewEvent = new Events();
+            NewEvent.ID = eventID;
+            NewEvent.eventDescription = "Flooding Event";
+            NewEvent.eventLat = 1;
+            NewEvent.eventLong = 1;
+            NewEvent.eventDateTime = DateTime.Now;
+            this.EventSaveItem(NewEvent);
+
+
             //Insert the records.
             StrandedTravellers StrandedTraveller = new StrandedTravellers();
+            StrandedTraveller.eventID = eventID;
             StrandedTraveller.stranded_lat = 0;
             StrandedTraveller.stranded_long = 0;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
@@ -48,6 +61,7 @@ namespace FloodPing.Data
             this.StrandedTravellerSaveItem(StrandedTraveller);
 
             StrandedTraveller.ID = 0;
+            StrandedTraveller.eventID = eventID;
             StrandedTraveller.stranded_lat = 0;
             StrandedTraveller.stranded_long = 1;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
@@ -57,6 +71,7 @@ namespace FloodPing.Data
             this.StrandedTravellerSaveItem(StrandedTraveller);
 
             StrandedTraveller.ID = 0;
+            StrandedTraveller.eventID = eventID;
             StrandedTraveller.stranded_lat = 1;
             StrandedTraveller.stranded_long = 0;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
@@ -66,6 +81,7 @@ namespace FloodPing.Data
             this.StrandedTravellerSaveItem(StrandedTraveller);
 
             StrandedTraveller.ID = 0;
+            StrandedTraveller.eventID = eventID;
             StrandedTraveller.stranded_lat = 1;
             StrandedTraveller.stranded_long = 1;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
@@ -81,6 +97,23 @@ namespace FloodPing.Data
             this.LocationSaveItem(LocationsNames);
 
 
+        }
+
+        // Method to insert an event.
+        public int EventSaveItem(Events item)
+        {
+            lock (locker)
+            {
+                if (item.ID != 0)
+                {
+                    database.Update(item);
+                    return item.ID;
+                }
+                else
+                {
+                    return database.Insert(item);
+                }
+            }
         }
 
         // Method to insert or update stranded travellers.

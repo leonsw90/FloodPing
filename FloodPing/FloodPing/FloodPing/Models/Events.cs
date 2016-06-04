@@ -7,9 +7,9 @@ using SQLite;
 
 namespace FloodPing.Models
 {
-    public class EmergencyMessages
+    public class Events
     {
-        public EmergencyMessages()
+        public Events()
         {
 
         }
@@ -17,10 +17,10 @@ namespace FloodPing.Models
         // Table to locally store the history of broadcast message.
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
-        public int eventID { get; set; }
-        public string messageType { get; set; }
-        public string message { get; set; }
-        public DateTime message_sentdate { get; set; }
+        public string eventDescription { get; set; }
+        public double eventLong { get; set; }
+        public double eventLat { get; set; }
+        public DateTime eventDateTime { get; set; }
 
     }
 
