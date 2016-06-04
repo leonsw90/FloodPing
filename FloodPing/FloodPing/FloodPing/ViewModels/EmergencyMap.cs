@@ -31,7 +31,7 @@ namespace FloodPing.ViewModels
             System.Diagnostics.Debug.WriteLine(strandedId);
             travellerDetail = App.Database.GetTravellerDetail(strandedId);
             
-                System.Diagnostics.Debug.WriteLine("traveller name: ");
+            System.Diagnostics.Debug.WriteLine("traveller name: ");
             System.Diagnostics.Debug.WriteLine(travellerDetail.traveller_name);
 
         }

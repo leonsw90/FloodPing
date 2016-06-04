@@ -22,6 +22,7 @@ namespace FloodPing.Data
             database.CreateTable<EmergencyMessages>();
             database.CreateTable<LocationsNames>();
             database.CreateTable<Events>();
+            database.CreateTable<FloodLocation>();
 
             // Create the stranded traveller table.
             // This reset the records every time the app is started to
@@ -92,11 +93,24 @@ namespace FloodPing.Data
 
             // Table to store the locations of the subhurbs
             LocationsNames LocationsNames = new LocationsNames();
-            LocationsNames.Name = "Ipshwich";
+            LocationsNames.Name = "Ipswich";
             LocationsNames.Address = "Adress 1, City";
             this.LocationSaveItem(LocationsNames);
 
+            FloodLocation FloodLocation_obj = new FloodLocation();
+            FloodLocation_obj.PlaceName = "Ipswich";
+            FloodLocation_obj.Location = "QLD";
+            FloodLocation_obj.Chance = "70%";
+            this.FloodLocationSaveItem(FloodLocation_obj);
 
+
+
+            
+        }
+
+        internal FloodLocation GetFloodLocations(int strandedId)
+        {
+            throw new NotImplementedException();
         }
 
         // Method to insert an event.
@@ -145,6 +159,24 @@ namespace FloodPing.Data
                 else
                 {
                     return database.Insert(item);
+                }
+            }
+        }
+
+        public int FloodLocationSaveItem(FloodLocation item)
+        {
+            lock (locker)
+            {
+                if (item.ID != 0)
+                {
+                    database.Update(item);
+                    return item.ID;
+                }
+                else
+                {
+                    return database.Insert(item);
+
+
                 }
             }
         }
@@ -212,6 +244,14 @@ namespace FloodPing.Data
 
         /// Method to save the subhurb data int database
         ///
+
+        public IEnumerable<FloodLocation> GetFloodLocations()
+        {
+            lock (locker)
+            {
+                return database.Table<FloodLocation>().ToList();
+            }
+        }
 
         public int LocationSaveItem(LocationsNames item)
         {

@@ -30,5 +30,7 @@ namespace FloodPing
         public static string Medium = "MediumImage";
         public static string Light = "LightImage";
         public static string Facebook = "Facebook";
+
+        // coment
     }
 }

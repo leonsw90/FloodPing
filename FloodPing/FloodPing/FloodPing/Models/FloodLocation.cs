@@ -7,17 +7,20 @@ using System.Threading.Tasks;
 
 namespace FloodPing.Models
 {
-    public class LocationsNames
+    public class FloodLocation
     {
 
-        public LocationsNames()
+        public FloodLocation()
         {
 
-        }             
+        }
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
-        public String Name { get; set; }
-        public String Address{ get; set; }
-   
+        public String PlaceName { get; set; }
+        public String Chance { get; set; }
+        public String Location { get; set; }
+
+
+
     }
 }
