@@ -12,7 +12,7 @@
       <Button Text="Share Flood Images" Clicked="LaunchShare"  FontAttributes="Bold"/>
       <!--<Button Text="Share Flood Images" Clicked="LaunchShare" />-->
       <Button Text="Emergency - Broadcast Message" Clicked="LaunchEmergencyStrandedTravellers" FontAttributes="Bold" />
-      <Button Text="Emergency - Map" Clicked="LaunchEmergencyMap" FontAttributes="Bold" />
+      <Button Text="Emergency - Stranded Map" Clicked="LaunchEmergencyMap" FontAttributes="Bold" />
       
     </StackLayout>
   </ContentPage.Content>

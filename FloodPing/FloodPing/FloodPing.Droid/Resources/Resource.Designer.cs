@@ -3357,8 +3357,8 @@ namespace FloodPing.Droid
 			// aapt resource value: 0x7f020072
 			public const int mroute = 2130837618;
 			
-			// aapt resource value: 0x7f020077
-			public const int notification_template_icon_bg = 2130837623;
+			// aapt resource value: 0x7f02007b
+			public const int notification_template_icon_bg = 2130837627;
 			
 			// aapt resource value: 0x7f020073
 			public const int routemap = 2130837619;
@@ -3371,6 +3371,18 @@ namespace FloodPing.Droid
 			
 			// aapt resource value: 0x7f020076
 			public const int spot = 2130837622;
+			
+			// aapt resource value: 0x7f020077
+			public const int StrandedLocation1 = 2130837623;
+			
+			// aapt resource value: 0x7f020078
+			public const int StrandedLocation2 = 2130837624;
+			
+			// aapt resource value: 0x7f020079
+			public const int StrandedLocation3 = 2130837625;
+			
+			// aapt resource value: 0x7f02007a
+			public const int StrandedLocation4 = 2130837626;
 			
 			static Drawable()
 			{

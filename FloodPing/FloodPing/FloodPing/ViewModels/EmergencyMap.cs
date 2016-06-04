@@ -115,6 +115,19 @@ namespace FloodPing.ViewModels
             }
 
         }
+        public string strandedPic
+        {
+            get
+            {
+                return "StrandedLocation"+travellerDetail.ID+".jpg";
+            }
+            set
+            {
+                _strandedDetail = "";
+                RaisePropertyChanged(() => strandedPic);
+            }
+
+        }
 
         // Method that sets and get Sending of the text message.
         private string _SendMessageText;

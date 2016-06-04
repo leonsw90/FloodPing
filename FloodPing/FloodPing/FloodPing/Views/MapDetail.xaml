@@ -5,15 +5,14 @@
              Title ="Stranded Person Detail">
   
   <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-    <Image Source="Location1.PNG" HorizontalOptions="CenterAndExpand" Scale="2.1" />
+    <Image Source="{Binding strandedPic, StringFormat='{0:F0}'}" HorizontalOptions="CenterAndExpand" Scale="2" />
     <Label Text=" " />
     <Label Text=" " />
     <Label Text=" " />
     <Label Text=" " />
     <Label Text="{Binding strandedName, StringFormat='Name: {0:F0}'}" />
-    <Label Text="Location :" />
-    <Label Text="{Binding strandedLocationLat, StringFormat='Lat : {0:F0}'}" />
-    <Label Text="{Binding strandedLocationLong, StringFormat='Long: {0:F0}'}" />
+    <Label Text="{Binding strandedLocationLat, StringFormat='Latitude  : {0:F0}'}" />
+    <Label Text="{Binding strandedLocationLong, StringFormat='Longtitude : {0:F0}'}" />
     <Label Text="Info :" />
     <Label Text="{Binding strandedDetail, StringFormat='{0:F0}'}" />
   </StackLayout>
