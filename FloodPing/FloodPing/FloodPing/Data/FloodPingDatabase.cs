@@ -14,6 +14,7 @@ namespace FloodPing.Data
 
         static object locker = new object();
         SQLiteConnection database;
+        public int status = 0;
 
         public FloodPingDatabase()
         {
@@ -108,10 +109,14 @@ namespace FloodPing.Data
 
 
             // Table to store the saved routes
+            if (status == 0)
+            {
 
-            SafeRoutes SafeRoute_obj = new SafeRoutes();
-            SafeRoute_obj.LocationName = "Ipswich";
-            this.SafeRoutesitemsave(SafeRoute_obj);
+                SafeRoutes SafeRoute_obj = new SafeRoutes();
+                SafeRoute_obj.LocationName = "Ipswich";
+                this.SafeRoutesitemsave(SafeRoute_obj);
+                status++;
+            }
 
 
 
