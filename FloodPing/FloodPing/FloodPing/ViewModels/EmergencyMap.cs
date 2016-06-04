@@ -18,8 +18,8 @@ namespace FloodPing.ViewModels
         //init var
         private int _strandedId;
         private string _strandedName;
-        private string _strandedLocationLat;
-        private string _strandedLocationLong;
+        private int _strandedLocationLat;
+        private int _strandedLocationLong;
         private string _strandedDetail;
         private StrandedTravellers travellerDetail;
 
@@ -75,15 +75,42 @@ namespace FloodPing.ViewModels
 
         }
 
-        public string strandedLocationLat
+        public int strandedLocationLat
         {
             get
             {
-                return travellerDetail.;
+                return travellerDetail.stranded_lat;
             }
             set
             {
-                _strandedName = value;
+                _strandedLocationLat = value;
+                RaisePropertyChanged(() => strandedName);
+            }
+
+        }
+        public int strandedLocationLong
+        {
+            get
+            {
+                return travellerDetail.stranded_long;
+            }
+            set
+            {
+                _strandedLocationLong = value;
+                RaisePropertyChanged(() => strandedName);
+            }
+
+        }
+
+        public string strandedDetail
+        {
+            get
+            {
+                return travellerDetail.emergency_detail;
+            }
+            set
+            {
+                _strandedDetail = value;
                 RaisePropertyChanged(() => strandedName);
             }
 
