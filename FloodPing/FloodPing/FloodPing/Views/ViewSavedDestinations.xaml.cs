@@ -23,7 +23,7 @@ namespace FloodPing.Views
             _messages.ItemTemplate = new DataTemplate(typeof(TextCell));
             _messages.ItemTemplate.SetBinding(TextCell.TextProperty, "LocationName");
             _messages.ItemTemplate.SetBinding(TextCell.DetailProperty, "CreatedOn");
-            _messages.RowHeight = 100;
+            _messages.RowHeight = 100; // To change the text size
 
             Content = _messages;
         }
