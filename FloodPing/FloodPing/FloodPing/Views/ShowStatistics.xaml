@@ -6,7 +6,7 @@
   <StackLayout>
 
     <Label Text="Country"></Label>
-    
+
     <Editor Text="Australia"></Editor>
     <Label Text="State:"/>
     <Editor Text=""/>
@@ -14,10 +14,27 @@
     <Editor Text=""/>
     <Label Text="Postcode"/>
     <Editor Text=""/>
-    <Label Text="Year"/>
+    <Label Text="Years"/>
     <Editor Text=""/>
-  
+
     <Button Text="Get Statistics" Clicked="LaunchGraphview"></Button>
-    
+
+
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+      <Button text="2000-04" Grid.Row="0" Grid.Column="0"/>
+      <Button text="2004-08" Grid.Row="0" Grid.Column="1"/>
+      <Button text="2008-12" Grid.Row="1" Grid.Column="0"/>
+      <Button text="2012-16" Grid.Row="1" Grid.Column="1"/>
+
+    </Grid>
   </StackLayout>
 </ContentPage>
