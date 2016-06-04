@@ -23,6 +23,7 @@ namespace FloodPing.Views
         {
             // Launch Emergency App
             Navigation.PushAsync(new Views.FTraveller3());
+
         }
 
         public void GoToMainMenu(object sender, EventArgs args)
