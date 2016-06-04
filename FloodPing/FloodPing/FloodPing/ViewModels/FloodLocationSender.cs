@@ -39,9 +39,21 @@ namespace FloodPing.ViewModels
         public ICommand SendMessageCommand { get; private set; }
 
         // Method that sets and gets the number of stranded travellers.
-        private int _StrandedTravellers;
-        public int StrandedTravellers;
        
+        public string strandedName
+        {
+            get
+            {
+                return FloodLocation_obj.Location;
+            }
+            set
+            {
+                _Location = value;
+
+            }
+
+        }      
+
 
     }
 }
