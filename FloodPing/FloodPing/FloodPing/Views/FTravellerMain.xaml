@@ -29,9 +29,9 @@
       <Button Text="2012-16" Grid.Row="1" Grid.Column="1"/>-->
 
       <Label Text="Current Location: Armidale" TextColor="White" FontSize="28" HorizontalOptions="Center" Grid.Row="0" />
-      <Entry Placeholder="Enter your destination"  BackgroundColor="White"  FontSize="20" Grid.Row="1" />
+      <Entry Placeholder="Enter your destination"  Text="{Binding SaveRouteText, Mode=TwoWay}" BackgroundColor="White"  FontSize="20" Grid.Row="1" />
       
-      <Button x:Name ="MyButton"  Text="Enter" Clicked="FTraveller1" FontAttributes="Bold" FontSize="20" TextColor="Black"  Grid.Row="2" VerticalOptions="Center"  />
+      <Button x:Name ="MyButton"  Text="Enter" Clicked="FTraveller1" FontAttributes="Bold" FontSize="20" TextColor="Black"  Grid.Row="2" VerticalOptions="Center" Command="{Binding SendMessageCommand}"  />
 
     </Grid>
 

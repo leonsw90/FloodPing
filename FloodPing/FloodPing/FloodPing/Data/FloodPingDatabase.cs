@@ -24,6 +24,9 @@ namespace FloodPing.Data
             database.CreateTable<Events>();
             database.CreateTable<FloodLocation>();
 
+            database.CreateTable<SafeRoutes>();
+
+
             // Create the stranded traveller table.
             // This reset the records every time the app is started to
             // simulate strandeed travellers.
@@ -104,8 +107,18 @@ namespace FloodPing.Data
             this.FloodLocationSaveItem(FloodLocation_obj);
 
 
+            // Table to store the saved routes
 
-            
+            SafeRoutes SafeRoute_obj = new SafeRoutes();
+            SafeRoute_obj.LocationName = "Ipswich";
+            this.SafeRoutesitemsave(SafeRoute_obj);
+
+
+
+
+
+
+
         }
 
         internal FloodLocation GetFloodLocations(int strandedId)
@@ -205,6 +218,13 @@ namespace FloodPing.Data
             return allItems.Count();
         }
 
+        public int SafeRoutesCount()
+        {
+            var allItems = database.Table<SafeRoutes>().ToList();
+            return allItems.Count();
+
+        }
+
         // Method that returns a list of all the stranded travellers.
         public IEnumerable<StrandedTravellers> GetStrandedTravellers()
         {
@@ -253,7 +273,32 @@ namespace FloodPing.Data
             }
         }
 
+
+        public IEnumerable<SafeRoutes>GetSafeRoutes()
+        {
+            lock (locker)
+            {
+                return database.Table<SafeRoutes>().ToList();
+            }
+        }
+
         public int LocationSaveItem(LocationsNames item)
+        {
+            lock (locker)
+            {
+                if (item.ID != 0)
+                {
+                    database.Update(item);
+                    return item.ID;
+                }
+                else
+                {
+                    return database.Insert(item);
+                }
+            }
+        }
+
+        public int SafeRoutesitemsave(SafeRoutes item)
         {
             lock (locker)
             {

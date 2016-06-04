@@ -31,6 +31,8 @@ namespace FloodPing
         public static string Light = "LightImage";
         public static string Facebook = "Facebook";
 
+        public static string ViewSavedDestinations_var = "ViewSavedDestinations";
+
         // coment
     }
 }

@@ -6,7 +6,7 @@
 
   <ContentPage.ToolbarItems>
     <ToolbarItem Name="Main Menu" Activated="GoToMainMenu" Order="Secondary" Priority="1" />
-    <ToolbarItem Name="View Saved Destinations" Activated="GoToMainMenu" Order="Secondary" Priority="1" />
+    <ToolbarItem Name="View Saved Destinations" Activated="ViewSD" Order="Secondary" Priority="1" />
   </ContentPage.ToolbarItems>
 
   

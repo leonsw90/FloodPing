@@ -32,5 +32,12 @@ namespace FloodPing.Views
 
         }
 
+        public void ViewSD(object sender, EventArgs args)
+        {
+            // Launch Emergency Message Form
+            Navigation.PushAsync(new Views.ViewSavedDestinations());
+
+        }
+
     }
 }
