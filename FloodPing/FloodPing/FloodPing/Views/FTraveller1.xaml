@@ -5,12 +5,26 @@
   <!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
 
   <StackLayout  >
-    <Label Text="Current Location : Armidale" BackgroundColor="#d3d3d3"  TextColor="Black" FontSize="25" HorizontalOptions="Center"></Label>
-    <Label Text="Destination : Ipswich" BackgroundColor="#d3d3d3"  TextColor="Black" FontSize="25" HorizontalOptions="Center">
+
+    <Grid BackgroundColor="#3399ff">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*" />
+
+      </Grid.RowDefinitions>
+    
+    
+    
+    
+    <Label Text="Current Location : Armidale"   TextColor="White" FontSize="25" HorizontalOptions="Center" Grid.Row="0"></Label>
+    <Label Text="Destination : Ipswich"   TextColor="White" FontSize="25" HorizontalOptions="Center" Grid.Row="1">
     </Label>
     
-    <Button x:Name ="MyButton"  Text="Plan Route" Clicked="LaunchFTraveller2" FontAttributes="Bold" FontSize="20"  ></Button>
+    <Button x:Name ="MyButton"  Text="Plan Route" Clicked="LaunchFTraveller2" FontAttributes="Bold" FontSize="20" Grid.Row="2"  ></Button>
     <!--<Image Source="a1.jpg" ></Image>-->
+
+    </Grid>
 
   </StackLayout>
   
