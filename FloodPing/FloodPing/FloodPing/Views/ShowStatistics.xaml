@@ -6,13 +6,16 @@
   <StackLayout>
 
     <Label Text="Country"></Label>
+    
     <Editor Text="Australia"></Editor>
     <Label Text="State:"/>
-    <Editor Text="QLD"/>
+    <Editor Text=""/>
     <Label Text="City:"/>
-    <Editor Text="Brisbane"/>
+    <Editor Text=""/>
     <Label Text="Postcode"/>
-    <Editor Text="4050"/>
+    <Editor Text=""/>
+    <Label Text="Year"/>
+    <Editor Text=""/>
   
     <Button Text="Get Statistics" Clicked="LaunchGraphview"></Button>
     

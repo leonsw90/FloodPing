@@ -7,21 +7,17 @@ using SQLite;
 
 namespace FloodPing.Models
 {
-    public class StrandedTravellers
+    public class TravellerDetail
     {
-        public StrandedTravellers()
+        public TravellerDetail()
         {
-
         }
-        // Table that store the location of the stranded traveller.
+        // Table that store the location of the traveller Detail.
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
         public int stranded_long { get; set; }
         public int stranded_lat { get; set; }
-        public DateTime stranded_orginialtime { get; set; }
-        public DateTime stranded_lastupdatetime { get; set; }
         public string traveller_name { get; set; }
         public string emergency_detail { get; set; }
     }
-
 }

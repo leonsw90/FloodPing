@@ -14,12 +14,13 @@ namespace FloodPing.Views
 {
     public partial class MapDetail : ContentPage
     {
-        public MapDetail()
+        public MapDetail(int travellerID)
         {
             InitializeComponent();
-
+            System.Diagnostics.Debug.WriteLine("traveller ID:");
+            System.Diagnostics.Debug.WriteLine(travellerID.ToString()); 
             // Bind the view to the ViewModel
-            BindingContext = new EmergencyMapViewModel(1);
+            BindingContext = new EmergencyMapViewModel(travellerID);
 
 
         }

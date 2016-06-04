@@ -43,6 +43,7 @@
     <Compile Include="Models\EmergencyMessages.cs" />
     <Compile Include="Models\LocationsNames.cs" />
     <Compile Include="Models\StrandedTravellers.cs" />
+    <Compile Include="Models\TravellerDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\EmergencyMap.cs" />
     <Compile Include="ViewModels\EmergencyStrandedTravellers.cs" />
@@ -59,6 +60,9 @@
     </Compile>
     <Compile Include="Views\EmergencyViewMessageHistory.xaml.cs">
       <DependentUpon>EmergencyViewMessageHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Facebook.xaml.cs">
+      <DependentUpon>Facebook.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FTraveller1.xaml.cs">
       <DependentUpon>FTraveller1.xaml</DependentUpon>
@@ -78,11 +82,20 @@
     <Compile Include="Views\GraphShowing.xaml.cs">
       <DependentUpon>GraphShowing.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\HeavyImage.xaml.cs">
+      <DependentUpon>HeavyImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LightImage.xaml.cs">
+      <DependentUpon>LightImage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MapDetail.xaml.cs">
       <DependentUpon>MapDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MediumImage.xaml.cs">
+      <DependentUpon>MediumImage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SharePics.xaml.cs">
       <DependentUpon>SharePics.xaml</DependentUpon>
@@ -209,6 +222,30 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\MapDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\HeavyImage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MediumImage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\LightImage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Facebook.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

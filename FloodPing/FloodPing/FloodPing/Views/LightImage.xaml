@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FloodPing.Views.LightImage">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <Label TextColor="#77d065" FontSize ="20" Text="Location: 12, De Mille St, McDowall, QLD"></Label>
+  <Image Source="flood.jpg"></Image>
+  <Label TextColor="#77d065" FontSize="10" Text="Light Flood"></Label>
+</ContentPage>

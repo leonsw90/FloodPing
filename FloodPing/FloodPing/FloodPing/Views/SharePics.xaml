@@ -5,9 +5,10 @@
   <!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
   <StackLayout>
     <Image Source="flood.jpg" ></Image>
-    <Button  Text="Heavy Flood" BackgroundColor="Red" ></Button>
-    <Button  Text="Light Flood" BackgroundColor="Yellow"></Button>
-    <Button  Text="Possible Flood" BackgroundColor="Aqua"></Button>
+    <Button  Text="Heavy Flood" BackgroundColor="Red" Clicked="HeavyTag" ></Button>
+    <Button  Text="Medium Flood" BackgroundColor="Yellow" Clicked="MediumTag"></Button>
+    <Button  Text="Light Flood" BackgroundColor="Aqua" Clicked="LightTag"></Button>
+    <Button Text="Share on Facebook" BackgroundColor="Blue" Clicked="Facebooked"></Button>
     <!--<Button x:Name ="MyButton"  Text="Possible Flood" Clicked="ButtonClicked" FontFamily="Times New Roman"  ></Button>-->
     
   </StackLayout>

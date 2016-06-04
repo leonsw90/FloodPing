@@ -31,15 +31,20 @@ namespace FloodPing.Data
             database.DropTable<StrandedTravellers>();
             database.CreateTable<StrandedTravellers>();
 
+            database.DropTable<TravellerDetail>();
+            database.CreateTable<TravellerDetail>();
+
             // For the purposes of the MVP, reset the stranded customers when the app
             // has been started.
-            
+
             //Insert the records.
             StrandedTravellers StrandedTraveller = new StrandedTravellers();
             StrandedTraveller.stranded_lat = 0;
             StrandedTraveller.stranded_long = 0;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
             StrandedTraveller.stranded_lastupdatetime = DateTime.Now;
+            StrandedTraveller.traveller_name = "Jane";
+            StrandedTraveller.emergency_detail = "Trapped in car, middle of road.";
             this.StrandedTravellerSaveItem(StrandedTraveller);
 
             StrandedTraveller.ID = 0;
@@ -47,6 +52,8 @@ namespace FloodPing.Data
             StrandedTraveller.stranded_long = 1;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
             StrandedTraveller.stranded_lastupdatetime = DateTime.Now;
+            StrandedTraveller.traveller_name = "John";
+            StrandedTraveller.emergency_detail = "Trapped in road, no exit.";
             this.StrandedTravellerSaveItem(StrandedTraveller);
 
             StrandedTraveller.ID = 0;
@@ -54,6 +61,8 @@ namespace FloodPing.Data
             StrandedTraveller.stranded_long = 0;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
             StrandedTraveller.stranded_lastupdatetime = DateTime.Now;
+            StrandedTraveller.traveller_name = "Mike";
+            StrandedTraveller.emergency_detail = "Stuck in house,no way out.";
             this.StrandedTravellerSaveItem(StrandedTraveller);
 
             StrandedTraveller.ID = 0;
@@ -61,8 +70,9 @@ namespace FloodPing.Data
             StrandedTraveller.stranded_long = 1;
             StrandedTraveller.stranded_orginialtime = DateTime.Now;
             StrandedTraveller.stranded_lastupdatetime = DateTime.Now;
+            StrandedTraveller.traveller_name = "Jane";
+            StrandedTraveller.emergency_detail = "Trapped in car.";
             this.StrandedTravellerSaveItem(StrandedTraveller);
-
 
             // Table to store the locations of the subhurbs
             LocationsNames LocationsNames = new LocationsNames();
@@ -75,6 +85,22 @@ namespace FloodPing.Data
 
         // Method to insert or update stranded travellers.
         public int StrandedTravellerSaveItem(StrandedTravellers item)
+        {
+            lock (locker)
+            {
+                if (item.ID != 0)
+                {
+                    database.Update(item);
+                    return item.ID;
+                }
+                else
+                {
+                    return database.Insert(item);
+                }
+            }
+        }
+
+        public int TravellerDetailSaveItem(TravellerDetail item)
         {
             lock (locker)
             {
@@ -122,6 +148,23 @@ namespace FloodPing.Data
                 return database.Table<StrandedTravellers>().ToList();
             }
             
+        }
+
+        public IEnumerable<TravellerDetail> GetTravellerDetail()
+        {
+            lock (locker)
+            {
+                return database.Table<TravellerDetail>().ToList();
+            }
+
+        }
+
+        public StrandedTravellers GetTravellerDetail(int ID)
+        {
+            lock (locker)
+            {
+                return database.Get<StrandedTravellers>(ID);
+            }
         }
 
         public IEnumerable<EmergencyMessages> GetEmergencyMessages()
