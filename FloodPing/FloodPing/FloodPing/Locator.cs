@@ -26,6 +26,7 @@ namespace FloodPing
 
         public static string NinthPage = "SharePics";
         public static string TenthPage = "ShowStatistics";
+
         
     }
 }
