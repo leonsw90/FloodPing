@@ -30,10 +30,10 @@
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="*"/>
       </Grid.ColumnDefinitions>
-      <Button text="2000-04" Grid.Row="0" Grid.Column="0"/>
-      <Button text="2004-08" Grid.Row="0" Grid.Column="1"/>
-      <Button text="2008-12" Grid.Row="1" Grid.Column="0"/>
-      <Button text="2012-16" Grid.Row="1" Grid.Column="1"/>
+      <Button Text="2000-04" Grid.Row="0" Grid.Column="0"/>
+      <Button Text="2004-08" Grid.Row="0" Grid.Column="1"/>
+      <Button Text="2008-12" Grid.Row="1" Grid.Column="0"/>
+      <Button Text="2012-16" Grid.Row="1" Grid.Column="1"/>
 
     </Grid>
   </StackLayout>
