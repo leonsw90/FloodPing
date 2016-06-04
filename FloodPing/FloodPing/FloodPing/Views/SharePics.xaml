@@ -7,8 +7,8 @@
     <Image Source="flood.jpg" ></Image>
     <Button  Text="Heavy Flood" BackgroundColor="Red" Clicked="HeavyTag" ></Button>
     <Button  Text="Medium Flood" BackgroundColor="Yellow" Clicked="MediumTag"></Button>
-    <Button  Text="Light Flood" BackgroundColor="Aqua" Clicked="LightTag"></Button>
-    <Button Text="Share on Facebook" BackgroundColor="Blue" Clicked="Facebooked"></Button>
+    <Button  Text="Light Flood" BackgroundColor="Lime" Clicked="LightTag"></Button>
+    <Button Text="Share on Facebook" BackgroundColor="Aqua" Clicked="Facebooked"></Button>
     <!--<Button x:Name ="MyButton"  Text="Possible Flood" Clicked="ButtonClicked" FontFamily="Times New Roman"  ></Button>-->
     
   </StackLayout>

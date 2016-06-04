@@ -6,6 +6,6 @@
   <StackLayout>
   <Label TextColor="Blue" FontSize ="20" Text="Location: 12, De Mille St, McDowall, QLD"></Label>
   <Image Source="flood.jpg"></Image>
-  <Label TextColor="Fuchsia" FontSize="10" Text="Heavy Flood"></Label>
+  <Label TextColor="Fuchsia" FontSize="15" Text="Tagged as : Heavy Flood"></Label>
   </StackLayout>
 </ContentPage>
