@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FloodPing.Views.MapDetail">
+             x:Class="FloodPing.Views.MapDetail"
+             Title ="Stranded Person Detail">
   
   <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-    <Image Source="Location1.PNG" HorizontalOptions="CenterAndExpand" Scale="2.1" />
+    <Image Source="{Binding strandedPic, StringFormat='{0:F0}'}" HorizontalOptions="CenterAndExpand" Scale="2" />
     <Label Text=" " />
     <Label Text=" " />
     <Label Text=" " />
     <Label Text=" " />
-    <Label Text="Name :" />
-    <Label Text="{Binding StrandedName, StringFormat='Name: {0:F0}'}" />
-    <Label Text="Location :" />
-    <Label Text="{Binding StrandedLocation, StringFormat='Location: {0:F0}'}" />
+    <Label Text="{Binding strandedName, StringFormat='Name: {0:F0}'}" />
+    <Label Text="{Binding strandedLocationLat, StringFormat='Latitude  : {0:F0}'}" />
+    <Label Text="{Binding strandedLocationLong, StringFormat='Longtitude : {0:F0}'}" />
     <Label Text="Info :" />
-    <Label Text="{Binding StrandedInfo, StringFormat='Info: {0:F0}'}" />
+    <Label Text="{Binding strandedDetail, StringFormat='{0:F0}'}" />
   </StackLayout>
 </ContentPage>

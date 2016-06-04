@@ -41,6 +41,9 @@ namespace FloodPing
             nav.Configure(Locator.Medium, typeof(MediumImage));
             nav.Configure(Locator.Facebook, typeof(Facebook));
 
+            nav.Configure(Locator.ViewSavedDestinations_var, typeof(ViewSavedDestinations));
+
+
 
             SimpleIoc.Default.Register<INavigationService>(() => nav);
             var mainPage = new NavigationPage(new MainPage());

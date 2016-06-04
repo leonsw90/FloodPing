@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FloodPing.Views.MediumImage">
   <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <StackLayout>
   <Label TextColor="#77d065" FontSize ="20" Text="Location: 12, De Mille St, McDowall, QLD"></Label>
   <Image Source="flood.jpg"></Image>
-  <Label TextColor="#77d065" FontSize="11" Text="Medium Flood"></Label>
+  <Label TextColor="#77d065" FontSize="15" Text="Tagged as : Medium Flood"></Label>
+  </StackLayout>
 </ContentPage>

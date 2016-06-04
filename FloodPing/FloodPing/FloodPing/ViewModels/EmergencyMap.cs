@@ -18,8 +18,10 @@ namespace FloodPing.ViewModels
         //init var
         private int _strandedId;
         private string _strandedName;
-        private string _strandedLocation;
-        //private StrandedTravellers travellerDetail;
+        private int _strandedLocationLat;
+        private int _strandedLocationLong;
+        private string _strandedDetail;
+        private StrandedTravellers travellerDetail;
 
         public EmergencyMapViewModel(int strandedId)
         {
@@ -27,15 +29,10 @@ namespace FloodPing.ViewModels
 
             System.Diagnostics.Debug.WriteLine("val: ");
             System.Diagnostics.Debug.WriteLine(strandedId);
-            var travellerDetail = App.Database.GetTravellerDetail(strandedId);
+            travellerDetail = App.Database.GetTravellerDetail(strandedId);
             
-                System.Diagnostics.Debug.WriteLine("traveller name: ");
+            System.Diagnostics.Debug.WriteLine("traveller name: ");
             System.Diagnostics.Debug.WriteLine(travellerDetail.traveller_name);
-
-
-
-
-
 
         }
 
@@ -43,6 +40,7 @@ namespace FloodPing.ViewModels
         private int noStrandedTravellers = App.Database.StrandedTravellerCount();
         private INavigationService _navigationService;
         public ICommand SendMessageCommand { get; private set; }
+
 
 
         
@@ -58,6 +56,75 @@ namespace FloodPing.ViewModels
             {
                 _StrandedTravellers = value;
                 RaisePropertyChanged(() => StrandedTravellers);
+            }
+
+        }
+
+        // Method that sets and gets the number of stranded travellers.
+        public string strandedName
+        {
+            get
+            {
+                return travellerDetail.traveller_name;
+            }
+            set
+            {
+                _strandedName = value;
+                RaisePropertyChanged(() => strandedName);
+            }
+
+        }
+
+        public int strandedLocationLat
+        {
+            get
+            {
+                return travellerDetail.stranded_lat;
+            }
+            set
+            {
+                _strandedLocationLat = value;
+                RaisePropertyChanged(() => strandedName);
+            }
+
+        }
+        public int strandedLocationLong
+        {
+            get
+            {
+                return travellerDetail.stranded_long;
+            }
+            set
+            {
+                _strandedLocationLong = value;
+                RaisePropertyChanged(() => strandedName);
+            }
+
+        }
+
+        public string strandedDetail
+        {
+            get
+            {
+                return travellerDetail.emergency_detail;
+            }
+            set
+            {
+                _strandedDetail = value;
+                RaisePropertyChanged(() => strandedName);
+            }
+
+        }
+        public string strandedPic
+        {
+            get
+            {
+                return "StrandedLocation"+travellerDetail.ID+".jpg";
+            }
+            set
+            {
+                _strandedDetail = "";
+                RaisePropertyChanged(() => strandedPic);
             }
 
         }

@@ -4,6 +4,11 @@
              x:Class="FloodPing.Views.FTraveller3">
   <!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
 
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Name="Main Menu" Activated="GoToMainMenu" Order="Secondary" Priority="1" />
+    <ToolbarItem Name="View Saved Destinations" Activated="ViewSD" Order="Secondary" Priority="1" />
+  </ContentPage.ToolbarItems>
+
   
   
 </ContentPage>

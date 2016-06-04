@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FloodPing.Views.EmergencySendMessageForm"
-             Title="Send Message">
+             Title="Broadcast Message">
   <ContentPage.Content>
     <StackLayout  Padding="5,10">    
       <Label Text="Broadcast Message to All Stranded Travellers" FontAttributes="Bold" FontSize="Large"/>

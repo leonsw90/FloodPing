@@ -21,6 +21,19 @@ namespace FloodPing.Views
 			// Launch Emergency App
 			Navigation.PushAsync(new Views.Alert3());
 		}
+<<<<<<< HEAD
+=======
+		public void LaunchFloodAlert4(object sender, EventArgs args)
+		{
+			// Launch Emergency App
+			Navigation.PushAsync(new Views.Alert4());
+		}
+		public void LaunchFloodAlert5(object sender, EventArgs args)
+		{
+			// Launch Emergency App
+			Navigation.PushAsync(new Views.Alert5());
+		}
+>>>>>>> master
 	}
 }
 

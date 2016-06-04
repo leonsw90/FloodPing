@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FloodPing.ViewModels;
+using GalaSoft.MvvmLight.Ioc;
+using GalaSoft.MvvmLight.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,8 +22,20 @@ namespace FloodPing.Views
             BindingContext = this;
 
             this.Title = "Journey Planner";
-            
+
+            BindingContext = new SafeRouteViewModel(SimpleIoc.Default.GetInstance<INavigationService>());
+
+            // Setup messaging centre to handle message from the viewModel.
+            MessagingCenter.Subscribe<SafeRouteViewModel, string>(this, "Destination Saved", (sender, arg) =>
+            {
+                DisplayAlert("Destination Saved", arg, "OK");
+
+
+            });
         }
+
+
+
 
         public void FTraveller1(object sender, EventArgs args)
         {

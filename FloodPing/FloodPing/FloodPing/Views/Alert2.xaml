@@ -4,11 +4,19 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 x:Class="FloodPing.Views.Alert2">
 
+<<<<<<< HEAD
 			 <StackLayout>
     <!--<Label Text="Warning : Flood Area" TextColor="Red" FontSize="35" ></Label>-->
     <Button x:Name ="MyButton"  Text="View Alert Details" Clicked="LaunchFloodAlert3" FontAttributes="Bold" FontSize="20" ></Button>
     
       
+=======
+			 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+    <!--<Label Text="Warning : Flood Area" TextColor="Red" FontSize="35" ></Label>-->
+    <Button x:Name ="MyButton"   Text="REDBANKS" Clicked="LaunchFloodAlert3" FontAttributes="Bold" FontSize="20" ></Button>
+    <Button x:Name ="MyButton1"  Text="IPSWICH"  Clicked="LaunchFloodAlert4" FontAttributes="Bold" FontSize="20" ></Button>
+    <Button x:Name ="MyButton2"  Text="OXLEY"    Clicked="LaunchFloodAlert5" FontAttributes="Bold" FontSize="20" ></Button>      
+>>>>>>> master
     
   </StackLayout>
 </ContentPage>

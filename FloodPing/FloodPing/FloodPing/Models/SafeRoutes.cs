@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace FloodPing.Models
 {
-    public class LocationsNames
+   public class SafeRoutes
     {
-
-        public LocationsNames()
+        public SafeRoutes()
         {
 
-        }             
+        }
+
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
-        public String Name { get; set; }
-        public String Address{ get; set; }
-   
+        public string LocationName { get; set; }
+        public DateTime CreatedOn { get; set; }
+
     }
 }

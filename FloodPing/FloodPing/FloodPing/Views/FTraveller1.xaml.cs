@@ -25,7 +25,19 @@ namespace FloodPing.Views
             // Launch Emergency App
             Navigation.PushAsync(new Views.FTraveller2());
         }
+        public void GoToMainMenu(object sender, EventArgs args)
+        {
+            // Launch Emergency Message Form
+            Navigation.PushAsync(new Views.MainPage());
 
+        }
+
+        public void ViewSD(object sender, EventArgs args)
+        {
+            // Launch Emergency Message Form
+            Navigation.PushAsync(new Views.ViewSavedDestinations());
+
+        }
 
 
     }

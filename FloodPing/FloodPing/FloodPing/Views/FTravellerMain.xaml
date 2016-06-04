@@ -4,11 +4,37 @@
              x:Class="FloodPing.Views.FTravellerMain">
   <!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
 
+
+  
+
   <StackLayout >
-    <Label Text="Current Location : Armidale"  BackgroundColor="#d3d3d3"  TextColor="Black" FontSize="25" HorizontalOptions="Center"/>
-    <Entry Placeholder="Enter your destination"  BackgroundColor="White"  FontSize="20" />
-    <Button x:Name ="MyButton"  Text="Enter" Clicked="FTraveller1" FontAttributes="Bold" FontSize="20"  />
+    
     <!--<Image Source="a1.jpg" ></Image>-->
+
+
+    <Grid BackgroundColor="#3399ff">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*" />
+
+      </Grid.RowDefinitions>
+      <!--<Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>-->
+      <!--<Button Text="2000-04" Grid.Row="0" Grid.Column="0"/>
+      <Button Text="2004-08" Grid.Row="0" Grid.Column="1"/>
+      <Button Text="2008-12" Grid.Row="1" Grid.Column="0"/>
+      <Button Text="2012-16" Grid.Row="1" Grid.Column="1"/>-->
+
+      <Label Text="Current Location: Armidale" TextColor="White" FontSize="28" HorizontalOptions="Center" Grid.Row="0" />
+      <Entry Placeholder="Enter your destination"  Text="{Binding SaveRouteText, Mode=TwoWay}" BackgroundColor="White"  FontSize="20" Grid.Row="1" />
+      
+      <Button x:Name ="MyButton"  Text="Enter" Clicked="FTraveller1" FontAttributes="Bold" FontSize="20" TextColor="Black"  Grid.Row="2" VerticalOptions="Center" Command="{Binding SendMessageCommand}"  />
+
+    </Grid>
+
 
   </StackLayout>
   

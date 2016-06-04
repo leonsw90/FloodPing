@@ -22,8 +22,6 @@ namespace FloodPing.ViewModels
         {
             _navigationService = navigationService;
 
-            // Set the method that handles sending of the messages.
-           // SendMessageCommand = new Command(() => SetSendMessage());
         }
 
         

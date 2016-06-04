@@ -64,6 +64,7 @@ namespace FloodPing.ViewModels
         public void SetSendMessage()
         {
             EmergencyMessages _message = new EmergencyMessages();
+            _message.eventID = 1;
             _message.message = SendMessageText;
             _message.message_sentdate = DateTime.Now;
             _message.messageType = "Broadcast";
