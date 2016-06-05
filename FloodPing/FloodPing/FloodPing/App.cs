@@ -43,6 +43,11 @@ namespace FloodPing
 
             nav.Configure(Locator.ViewSavedDestinations_var, typeof(ViewSavedDestinations));
 
+            nav.Configure(Locator.first_graph, typeof(graph1));
+            nav.Configure(Locator.sec_graph, typeof(graph2));
+            nav.Configure(Locator.third_graph, typeof(graph3));
+            nav.Configure(Locator.fourth_graph, typeof(graph4));
+
 
 
             SimpleIoc.Default.Register<INavigationService>(() => nav);

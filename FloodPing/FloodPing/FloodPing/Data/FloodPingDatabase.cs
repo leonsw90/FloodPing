@@ -27,6 +27,8 @@ namespace FloodPing.Data
 
             database.CreateTable<SafeRoutes>();
 
+            database.CreateTable<FloodSatistics>();
+
 
             // Create the stranded traveller table.
             // This reset the records every time the app is started to
@@ -278,12 +280,20 @@ namespace FloodPing.Data
             }
         }
 
-
+        // Method to show the location 
         public IEnumerable<SafeRoutes>GetSafeRoutes()
         {
             lock (locker)
             {
                 return database.Table<SafeRoutes>().ToList();
+            }
+        }
+        // method to show the FloodStatistics
+        public IEnumerable<FloodSatistics> GetFloodstatics()
+        {
+            lock (locker)
+            {
+                return database.Table<FloodSatistics>().ToList();
             }
         }
 
@@ -303,7 +313,25 @@ namespace FloodPing.Data
             }
         }
 
+        // Method to insert locations into database
         public int SafeRoutesitemsave(SafeRoutes item)
+        {
+            lock (locker)
+            {
+                if (item.ID != 0)
+                {
+                    database.Update(item);
+                    return item.ID;
+                }
+                else
+                {
+                    return database.Insert(item);
+                }
+            }
+        }
+
+        // method to insert statistics into database
+        public int FloodStatisticsitemsave(FloodSatistics item)
         {
             lock (locker)
             {

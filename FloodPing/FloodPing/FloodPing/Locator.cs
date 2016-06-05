@@ -33,6 +33,13 @@ namespace FloodPing
 
         public static string ViewSavedDestinations_var = "ViewSavedDestinations";
 
+        public static string first_graph = "graph1";
+        public static string sec_graph = "graph2";
+        public static string third_graph = "graph3";
+        public static string fourth_graph = "graph4";
+
+
+
         // coment
     }
 }

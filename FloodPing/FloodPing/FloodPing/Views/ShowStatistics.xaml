@@ -5,21 +5,19 @@
   <!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
   <StackLayout>
 
-    <Label Text="Country"></Label>
+    <Label Text="Country:" FontAttributes="Bold" TextColor="White"></Label>
 
-    <Editor Text="Australia"></Editor>
-    <Label Text="State:"/>
-    <Editor Text=""/>
-    <Label Text="City:"/>
-    <Editor Text=""/>
-    <Label Text="Postcode"/>
-    <Editor Text=""/>
-    <Label Text="Years"/>
-    <Editor Text=""/>
+    <Editor Text="Australia" BackgroundColor="White"></Editor>
+    <Label Text="State:" FontAttributes="Bold" TextColor="White"/>
+    <Editor Text="" BackgroundColor="White"/>
+    <Label Text="City:" FontAttributes="Bold" TextColor="White"/>
+    <Editor Text="" BackgroundColor="White"/>
+    <Label Text="Postcode" FontAttributes="Bold" TextColor="White"/>
+    <Editor Text="" BackgroundColor="White"/>
+    <Label Text="Years" FontAttributes="Bold" TextColor="White"/>
+    <Editor Text="" BackgroundColor="White"/>
 
-    <Button Text="Get Statistics" Clicked="LaunchGraphview"></Button>
-
-
+    <!--<Button Text="Get Statistics" Clicked="LaunchGraphview"></Button>-->
     <Grid>
       <Grid.RowDefinitions>
         <RowDefinition Height="*"/>
@@ -30,10 +28,10 @@
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="*"/>
       </Grid.ColumnDefinitions>
-      <Button Text="2000-04" Grid.Row="0" Grid.Column="0"/>
-      <Button Text="2004-08" Grid.Row="0" Grid.Column="1"/>
-      <Button Text="2008-12" Grid.Row="1" Grid.Column="0"/>
-      <Button Text="2012-16" Grid.Row="1" Grid.Column="1"/>
+      <Button Text="2000-2005" Clicked="g1fun" Grid.Row="0" Grid.Column="0"/>
+      <Button Text="2005-2010" Clicked="g2fun" Grid.Row="0" Grid.Column="1"/>
+      <Button Text="2010-2015" Clicked="g3fun" Grid.Row="1" Grid.Column="0"/>
+      <Button Text="2015-2020" Clicked="g4fun" Grid.Row="1" Grid.Column="1"/>
 
     </Grid>
   </StackLayout>

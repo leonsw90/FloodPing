@@ -13,14 +13,31 @@ namespace FloodPing.Views
         public ShowStatistics()
         {
             InitializeComponent();
+            this.BackgroundColor = Color.Black;
 
             Title = "Show Statistics";
         }
 
-        public void LaunchGraphview(object sender, EventArgs args)
+        public void g1fun(object sender, EventArgs args)
         {
             // Launch Emergency App
-            Navigation.PushAsync(new Views.GraphShowing());
+            Navigation.PushAsync(new Views.graph1());
         }
+        public void g2fun(object sender, EventArgs args)
+        {
+            // Launch Emergency App
+            Navigation.PushAsync(new Views.graph2());
+        }
+        public void g3fun(object sender, EventArgs args)
+        {
+            // Launch Emergency App
+            Navigation.PushAsync(new Views.graph3());
+        }
+        public void g4fun(object sender, EventArgs args)
+        {
+            // Launch Emergency App
+            Navigation.PushAsync(new Views.graph4());
+        }
+
     }
 }
